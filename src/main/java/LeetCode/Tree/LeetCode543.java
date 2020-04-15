@@ -1,5 +1,9 @@
-package LeetCode;
+package LeetCode.Tree;
 
+import Shared.TreeNode;
+
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 public class LeetCode543 {
     private int max = 0;
     public int diameterOfBinaryTree(TreeNode root) {
@@ -8,7 +12,6 @@ public class LeetCode543 {
     }
     private int dfs(TreeNode node) {
         if(node == null) return 0;
-        int currMax = 0;
         int left = dfs(node.left);
         int right = dfs(node.right);
         max = Math.max(max, left+right);
