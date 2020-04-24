@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.HashMap;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class LeetCode560 {
         return total;
     }
 
-    // Solution 2: optimal solution using prefixSum
+    // Solution 2: optimal solution using prefixSum, Map(prefixSum, # of occurrences of prefixSum).
     // Time Complexity: O(n)
     // Space Complexity: O(n)
     public int subarraySum2(int[] nums, int k) {
