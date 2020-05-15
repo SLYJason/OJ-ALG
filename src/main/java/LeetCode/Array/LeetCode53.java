@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.Array;
 
 public class LeetCode53 {
     // DP solution: Kadane's algorithm
