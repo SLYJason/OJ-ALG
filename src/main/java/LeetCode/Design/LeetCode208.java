@@ -1,4 +1,4 @@
-package LeetCode.SystemDesign;
+package LeetCode.Design;
 
 public class LeetCode208 {
     class Trie {
