@@ -1,4 +1,4 @@
-package LeetCode.Array;
+package LeetCode.BitManipulation;
 
 import java.util.Arrays;
 
