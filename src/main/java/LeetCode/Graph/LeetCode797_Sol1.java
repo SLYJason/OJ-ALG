@@ -3,7 +3,10 @@ package LeetCode.Graph;
 import java.util.List;
 import java.util.LinkedList;
 
-public class LeetCode797 {
+/**
+ * Solution 1: DFS
+ */
+public class LeetCode797_Sol1 {
     int[][] grapth;
     int target;
     List<List<Integer>> ans;
