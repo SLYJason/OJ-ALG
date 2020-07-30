@@ -1,10 +1,15 @@
-package LeetCode;
+package LeetCode.DynamicProgramming;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
 
-public class LeetCode139 {
+/**
+ * Solution 2: brute force recursion with memorization.
+ * Time Complexity: O(n^2), only need to check n*(n+1)/2 unique strings, i.e. O(n^2)
+ * Space Complexity: O(n^2).
+ */
+public class LeetCode139_Sol2 {
     // Reference: http://zxi.mytechroad.com/blog/leetcode/leetcode-139-word-break/
     public boolean wordBreak(String s, List<String> wordDict) {
         Map<String, Boolean> memo = new HashMap();
