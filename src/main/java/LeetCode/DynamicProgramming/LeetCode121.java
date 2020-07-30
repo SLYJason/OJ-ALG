@@ -1,6 +1,9 @@
-package LeetCode;
+package LeetCode.DynamicProgramming;
 
 public class LeetCode121 {
+    /**
+     * Solution 1: one pass
+     */
     public int maxProfit(int[] prices) {
         if(prices.length == 0) return 0;
         int minPrice = prices[0], maxPrice = 0;
