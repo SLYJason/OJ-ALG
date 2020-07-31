@@ -1,6 +1,6 @@
-package LeetCode;
+package LeetCode.DynamicProgramming;
 
-public class LeetCode70 {
+public class LeetCode70_Sol3 {
     public int climbStairs(int n) {
         if(n == 1 || n == 2) return n;
         int[] dp = new int[n+1];
