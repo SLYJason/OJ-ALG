@@ -6,3 +6,10 @@ Using Kadane's algorithm: 53 (regular array), 918 (circular array)
 
 # H-Index
 274 (array not sorted), 275 (array sorted, using binary search)
+
+# Array Item in the Range
+Make use of `1 ≤ a[i] ≤ n` (n = size of array).
+
+448 (Easy): find missing numbers.
+
+442 (Medium): find duplicates.
