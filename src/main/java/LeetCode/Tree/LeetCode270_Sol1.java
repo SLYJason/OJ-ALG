@@ -2,7 +2,10 @@ package LeetCode.Tree;
 
 import Shared.TreeNode;
 
-public class LeetCode270 {
+/**
+ * Solution 1: recursive
+ */
+public class LeetCode270_Sol1 {
     public int closestValue(TreeNode root, double target) {
         if(root == null) return 0;
         return dfs(root, target, root.val);
