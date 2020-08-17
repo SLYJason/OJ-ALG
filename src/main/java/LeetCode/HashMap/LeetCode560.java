@@ -25,14 +25,15 @@ public class LeetCode560 {
     // Time Complexity: O(n)
     // Space Complexity: O(n)
     public int subarraySum2(int[] nums, int k) {
-        if(nums == null || nums.length == 0) return 0;
-        int count = 0, prefixSum = 0;
+        int prefixSum = 0, count = 0;
         Map<Integer, Integer> map = new HashMap();
-        map.put(0, 1);
         for(int i=0; i<nums.length; i++) {
             prefixSum += nums[i];
-            count += map.getOrDefault(prefixSum-k, 0);
-            map.put(prefixSum, map.getOrDefault(prefixSum, 0)+1);
+            if(prefixSum == k) count++;
+            if(map.containsKey(prefixSum - k)) {
+                count += map.get(prefixSum - k);
+            }
+            map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
         }
         return count;
     }
