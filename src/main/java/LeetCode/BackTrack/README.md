@@ -3,4 +3,8 @@
 
 46 (Medium): Permutations with **duplicate** integers.
 
+31 (Medium): Next Permutations, need to use some trick here.
+
+![chart](LeetCode31.png)
+
 77 (Medium): Combinations.
