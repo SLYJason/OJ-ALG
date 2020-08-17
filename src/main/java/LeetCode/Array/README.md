@@ -13,3 +13,7 @@ Make use of `1 ≤ a[i] ≤ n` (n = size of array).
 448 (Easy): find missing numbers.
 
 442 (Medium): find duplicates.
+
+# Smart Search in 2D Array
+1428 (Medium):
+![chart](LeetCode1428.png)
