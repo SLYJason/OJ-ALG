@@ -5,3 +5,5 @@
 
 # The Maze
 490 (Medium): return *true* of *false* that the ball could stop at the position.
+
+505 (Medium): return the shortest path from start to end position.
