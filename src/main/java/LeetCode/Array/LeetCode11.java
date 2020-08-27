@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.Array;
 
 public class LeetCode11 {
     public int maxArea(int[] height) {

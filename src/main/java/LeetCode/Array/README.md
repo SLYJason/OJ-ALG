@@ -17,3 +17,8 @@ Make use of `1 ≤ a[i] ≤ n` (n = size of array).
 # Smart Search in 2D Array
 1428 (Medium):
 ![chart](LeetCode1428.png)
+
+# Trap Water
+11 (Medium): using two pointer.
+
+42 (Hard): solve in O(N) time complexity.
