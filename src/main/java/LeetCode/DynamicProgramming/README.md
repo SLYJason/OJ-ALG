@@ -12,6 +12,7 @@
 140 (Hard): return all breakable list of s.
 
 # Palindromic Substring
+5 (Hard): similar DP solution as 647.
 
 647 (Medium): `dp[i, j]` means `substring[i, j]` is a palindrome or not.
 ```
