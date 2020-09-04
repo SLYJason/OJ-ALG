@@ -1,8 +1,8 @@
 package LeetCode.DynamicProgramming;
 
+import java.util.Arrays;
 public class LeetCode416 {
-    // TODO: how to optimize the space
-    public boolean canPartition(int[] nums) {
+    public boolean canPartition1(int[] nums) {
         int sum = 0;
         for(int num : nums) sum += num;
         if(sum % 2 != 0) return false;
@@ -24,5 +24,20 @@ public class LeetCode416 {
             }
         }
         return dp[nums.length][sum];
+    }
+
+    public boolean canPartitio2(int[] nums) {
+        int sum = Arrays.stream(nums).sum();
+        if(sum % 2 != 0) return false;
+        sum  = sum / 2;
+        boolean[] dp = new boolean[sum+1];
+        dp[0] = true;
+
+        for(int i=1; i<nums.length+1; i++) {
+            for(int j=sum; j-nums[i-1] >= 0; j--) {
+                dp[j] = dp[j] || dp[j - nums[i-1]];
+            }
+        }
+        return dp[sum];
     }
 }
