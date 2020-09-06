@@ -1,6 +1,9 @@
 package LeetCode.String;
 
-public class LeetCode953 {
+/**
+ * Solution 2: clean code.
+ */
+public class LeetCode953_Sol2 {
     public boolean isAlienSorted(String[] words, String order) {
         int[] dict = new int[26];
         // building a dictionary based on order.
