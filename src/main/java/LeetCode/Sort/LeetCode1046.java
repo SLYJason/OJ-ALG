@@ -1,4 +1,4 @@
-package LeetCode.Heap;
+package LeetCode.Sort;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
