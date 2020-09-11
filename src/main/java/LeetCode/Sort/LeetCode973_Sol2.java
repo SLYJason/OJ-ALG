@@ -4,8 +4,9 @@ import java.util.PriorityQueue;
 
 /**
  * Solution 2: max-heap of size K solution, using PriorityQueue.
- * Time Complexity: O(NlogK)
- * Space Complexity: O(K)
+ * Time Complexity: O(NlogK).
+ * Space Complexity: O(K).
+ * Rules of thumb: Largest -> Min Heap, Smallest -> Max Heap.
  */
 public class LeetCode973_Sol2 {
     public int[][] kClosest(int[][] points, int K) {
