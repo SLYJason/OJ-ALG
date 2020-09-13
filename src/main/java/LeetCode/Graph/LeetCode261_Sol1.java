@@ -6,13 +6,13 @@ import java.util.Set;
 import java.util.HashSet;
 
 /**
- * Solution: recursive DFS.
+ * Solution 1: recursive DFS.
  *
  * To make a valid tree, check 2 things:
  * 1> All nodes are connected.
  * 2> There has no cycles.
  */
-public class LeetCode261 {
+public class LeetCode261_Sol1 {
     public boolean validTree(int n, int[][] edges) {
         // Building a graph.
         List<List<Integer>> graph = new ArrayList();
