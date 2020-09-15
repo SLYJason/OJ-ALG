@@ -25,7 +25,7 @@ public class LeetCode140_Sol1 {
             String right = s.substring(i);
             if(dict.contains(left)) {
                 combined += left + " ";
-                wb(right, new HashSet(dict), combined, ans, len);
+                wb(right, dict, combined, ans, len);
                 combined = combined.substring(0, combined.length()-left.length()-1);
             }
         }

@@ -31,7 +31,7 @@ public class LeetCode140_Sol2 {
             String left = s.substring(0, i); // wordDict check
             String right = s.substring(i); // recursive check
             if(wordDict.contains(left)) {
-                List<String> right_ans = append(wb(right, new HashSet(wordDict), memo), left);
+                List<String> right_ans = append(wb(right, wordDict, memo), left);
                 ans.addAll(right_ans);
             }
         }

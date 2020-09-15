@@ -16,6 +16,7 @@ public class LeetCode139_Sol3 {
             for(int j=0; j<i; j++) {
                 if(dp[j] && wordDict.contains(s.substring(j, i))) {
                     dp[i] = true;
+                    break;
                 }
             }
         }
