@@ -9,7 +9,7 @@ import java.util.Queue;
 /**
  * Solution: BFS.
  */
-public class Solution {
+public class Solution1 {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if(!wordList.contains(endWord)) return 0;
         Set<String> dict = new HashSet<>(wordList); // Important: conver to set can get rid of TLE.
