@@ -1,4 +1,4 @@
-package LeetCode.Amazon.OA1;
+package Amazon.OA1;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
