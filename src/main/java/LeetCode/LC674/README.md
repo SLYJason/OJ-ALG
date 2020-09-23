@@ -1,4 +1,4 @@
-# 673: Number of Longest Increasing Subsequence
+# 674: Longest Continuous Increasing Subsequence
 
 Related:
 
