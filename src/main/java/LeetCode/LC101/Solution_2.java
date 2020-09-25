@@ -1,10 +1,14 @@
-package LeetCode.Tree;
+package LeetCode.LC101;
 
 import Shared.TreeNode;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class LeetCode101_Sol2 {
+/**
+ * Solution 2: iterative.
+ * Keep in mind: LinkedList allows null, but ArrayDeque not.
+ */
+public class Solution_2 {
     public boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
         Queue<TreeNode> queue = new LinkedList();

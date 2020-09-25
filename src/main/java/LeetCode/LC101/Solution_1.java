@@ -1,11 +1,11 @@
-package LeetCode.Tree;
+package LeetCode.LC101;
 
 import Shared.TreeNode;
 
 /**
  * Solution 1: recursive.
  */
-public class LeetCode101_Sol1 {
+public class Solution_1 {
     public boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
         return isSymmetric(root.left, root.right);
