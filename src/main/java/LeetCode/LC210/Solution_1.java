@@ -1,4 +1,4 @@
-package LeetCode.LC207;
+package LeetCode.LC210;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.Queue;
  * Solution 1: Khan's algorithm, Topological Sorting.
  */
 public class Solution_1 {
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if(prerequisites.length == 0) return true;
-        List<Integer> res = new ArrayList();
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        int[] res = new int[numCourses];
+        int index = 0;
         List<List<Integer>> graph = new ArrayList();
         int[] in_degree = new int[numCourses];
         for(int i=0; i<numCourses; i++) graph.add(new ArrayList());
@@ -25,13 +25,13 @@ public class Solution_1 {
         }
         while(!queue.isEmpty()) {
             int course = queue.poll();
-            res.add(course);
+            res[index++] = course;
             for(int neighbor : graph.get(course)) {
                 if(--in_degree[neighbor] == 0) {
                     queue.offer(neighbor);
                 }
             }
         }
-        return res.size() == numCourses;
+        return index == numCourses ? res : new int[0];
     }
 }
