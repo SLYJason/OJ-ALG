@@ -1,12 +1,12 @@
-package LeetCode.Graph;
+package LeetCode.LC207;
 
 import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Solution: Topological Sort.
+ * Solution: DFS.
  */
-public class LeetCode207 {
+public class Solution_2 {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<List<Integer>> graph = new ArrayList();
         for(int i=0; i<numCourses; i++) graph.add(new ArrayList());
