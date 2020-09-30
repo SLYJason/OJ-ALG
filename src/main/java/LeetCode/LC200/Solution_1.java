@@ -1,9 +1,9 @@
-package LeetCode.Search;
+package LeetCode.LC200;
 
 /**
- * Solution 2: DFS.
+ * Solution 1: DFS.
  */
-public class LeetCode200_Sol2 {
+public class Solution_1 {
     public int numIslands(char[][] grid) {
         if(grid.length == 0) return 0;
         int rows = grid.length, cols = grid[0].length;
