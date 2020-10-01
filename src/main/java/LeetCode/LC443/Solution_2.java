@@ -1,6 +1,11 @@
-package LeetCode;
+package LeetCode.LC443;
 
-public class LeetCode443 {
+/**
+ * Solution 2: Two-Pointers.
+ * Time Complexity: O(N).
+ * Space Complexity: O(1).
+ */
+public class Solution_2 {
     public int compress(char[] chars) {
         int p1 = 0, p2 = 0;
         while(p2 < chars.length) {
