@@ -1,16 +1,16 @@
-package LeetCode.Greedy;
+package LeetCode.LC_601_800.LC763;
 
 import java.util.List;
 import java.util.LinkedList;
 
-public class LeetCode763 {
+public class Solution {
     /**
      * Solution 1: brute force, intuitive thoughts.
      * For any given character ch with a index i, find the last appearance index end.
      * Then inside the [i, end] substring, find every character last appearance index, if it larger than the index end then update it.
      *
      * Time Complexity: O(n^2).
-     * Space Complexity: O(n).
+     * Space Complexity: O(1).
      */
     public List<Integer> partitionLabels(String S) {
         List<Integer> res = new LinkedList<>();
