@@ -1,4 +1,4 @@
-package LeetCode.Search;
+package LeetCode.LC_201_400.LC286;
 
 import java.util.Queue;
 import java.util.LinkedList;
