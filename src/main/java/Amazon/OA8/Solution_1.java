@@ -6,9 +6,9 @@ import java.util.Set;
 import java.util.HashSet;
 
 /**
- * TODO: how can solve by sliding window.
+ * Solution 1: brute force.
  */
-public class Solution {
+public class Solution_1 {
     public List<String> subStrings(String inputString, int num) {
         List<String> res = new ArrayList<>();
         for(int i=0, j=num; j<=inputString.length(); i++, j++) {
@@ -21,7 +21,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Solution_1 s = new Solution_1();
         String inputString1 = "awaglk";
         int num1 = 4;
         String inputString2 = "democracy";
