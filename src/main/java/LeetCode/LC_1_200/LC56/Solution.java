@@ -1,4 +1,4 @@
-package LeetCode.Array;
+package LeetCode.LC_1_200.LC56;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * Time Complexity: O(n log(n)).
  * Space Complexity: O(1).
  */
-public class LeetCode56 {
+public class Solution {
     public int[][] merge(int[][] intervals) {
         if(intervals.length < 2) return intervals;
         List<int[]> list = new LinkedList();
