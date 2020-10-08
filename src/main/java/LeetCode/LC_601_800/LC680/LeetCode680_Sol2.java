@@ -1,4 +1,4 @@
-package LeetCode.String;
+package LeetCode.LC_601_800.LC680;
 
 /**
  * Solution 2: includes follow up.
