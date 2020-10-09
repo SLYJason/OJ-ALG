@@ -1,10 +1,10 @@
-package LeetCode.BackTrack;
+package LeetCode.LC_1_200.LC39;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.LinkedList;
 
-public class LeetCode39 {
+public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new LinkedList();
         Arrays.sort(candidates);
