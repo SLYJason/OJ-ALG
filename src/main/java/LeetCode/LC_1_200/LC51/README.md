@@ -1,4 +1,4 @@
-# 36: Valid Sudoku
+# 51: N-Queens
 
 Related:
 
