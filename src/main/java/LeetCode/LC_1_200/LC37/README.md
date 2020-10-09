@@ -9,3 +9,5 @@ Related:
 37: Sudoku Solver.
 
 51: N-Queens.
+
+52: N-Queens II.
