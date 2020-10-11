@@ -1,4 +1,4 @@
-# 414: Third Maximum Number
+# 347: Top K Frequent Elements
 
 Related:
 
