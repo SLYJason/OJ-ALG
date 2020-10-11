@@ -1,6 +1,6 @@
-package LeetCode;
+package LeetCode.LC_201_400.LC387;
 
-public class LeetCode387 {
+public class Solution {
     public int firstUniqChar(String s) {
         int[] array = new int[26];
         // Building an array that stores each character appearance times
