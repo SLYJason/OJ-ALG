@@ -1,11 +1,11 @@
-package LeetCode.Sort;
+package LeetCode.LC_801_1000.LC973;
 
 import java.util.Arrays;
 
 /**
- * Solution 3: optimal solution, using quick sort.
+ * Solution 3: optimal solution, using quick sort logic.
  */
-public class LeetCode973_Sol3 {
+public class Solution_3 {
     public int[][] kClosest(int[][] points, int K) {
         int low = 0, high = points.length-1;
         while(low < high) {
@@ -22,16 +22,17 @@ public class LeetCode973_Sol3 {
 
 
     private int partition(int low, int high, int[][] points) {
-        int[] pivot = points[high];
-        int i = low-1;
-        for(int j=low; j<high; j++) {
-            if(compare(points[j], pivot) < 0) {
-                i++;
+        int[] pivot = points[low];
+        int i = low+1, j = low+1;
+        while(j <= high) {
+            if(compare(points[j], pivot) < 0)  {
                 swap(points, i, j);
+                i++;
             }
+            j++;
         }
-        swap(points, i+1, high);
-        return i+1;
+        swap(points, --i, low);
+        return i;
     }
 
     private int compare(int[] p1, int[] p2) {

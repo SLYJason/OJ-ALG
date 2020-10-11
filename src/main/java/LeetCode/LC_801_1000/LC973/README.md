@@ -1,4 +1,4 @@
-# 215: Kth Largest Element in an Array
+# 973: K Closest Points to Origin
 
 Related:
 
