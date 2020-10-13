@@ -1,4 +1,4 @@
-package LeetCode.Design;
+package LeetCode.LC_1_200.LC146;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * Solution 1: brute force, intuitive thoughts
  */
-public class LeetCode146_Sol1 {
+public class Solution_1 {
     class LRUCache {
         Map<Integer, int[]> cache;
         int cacheAge;
