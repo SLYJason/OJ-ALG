@@ -1,11 +1,11 @@
-package LeetCode.LinkedList;
+package LeetCode.LC_201_400.LC203;
 
 import Shared.ListNode;
 
-public class LeetCode203 {
-    /**
-     * Solution 1: iterative
-     */
+/**
+ * Solution 1: iterative
+ */
+public class Solution_1 {
     public ListNode removeElements(ListNode head, int val) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
@@ -20,14 +20,5 @@ public class LeetCode203 {
             curr = curr.next;
         }
         return dummy.next;
-    }
-
-    /**
-     * Solution 1: recursive
-     */
-    public ListNode removeElements2(ListNode head, int val) {
-        if (head == null) return null;
-        head.next = removeElements(head.next, val);
-        return head.val == val ? head.next : head;
     }
 }
