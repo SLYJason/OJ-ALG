@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming;
+package LeetCode.LC_1_200.LC139;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import java.util.List;
  * Time Complexity: O(n^2)
  * Space Complexity: O(n)
  */
-public class LeetCode139_Sol3 {
+public class Solution_3 {
     public boolean wordBreak(String s, List<String> wordDict) {
         // dp[i] means the first i characters of s can be split
         boolean[] dp = new boolean[s.length()+1];
