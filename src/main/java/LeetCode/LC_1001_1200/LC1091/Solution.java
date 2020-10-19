@@ -1,4 +1,4 @@
-package LeetCode.LC_401_600.LC1091;
+package LeetCode.LC_1001_1200.LC1091;
 
 import java.util.Queue;
 import java.util.LinkedList;

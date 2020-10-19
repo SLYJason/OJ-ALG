@@ -1,4 +1,4 @@
-# 1091: Shortest Path in Binary Matrix
+# 695: Max Area of Island
 
 Related: 
 
@@ -7,6 +7,8 @@ Related:
 286: Walls and Gates.
 
 542: 01 Matrix.
+
+695: Max Area of Island.
 
 994: Rotting Oranges.
 

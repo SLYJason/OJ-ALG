@@ -8,6 +8,8 @@ Related:
 
 542: 01 Matrix.
 
+695: Max Area of Island.
+
 994: Rotting Oranges.
 
 1091: Shortest Path in Binary Matrix.
