@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming;
+package LeetCode.LC_1_200.LC140;
 
 import java.util.List;
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ import java.util.HashSet;
  * Time Complexity: O(2^n)
  * Space Complexity: O(2^n)
  */
-public class LeetCode140_Sol2 {
+public class Solution_2 {
     public List<String> wordBreak(String s, List<String> wordDict) {
         Map<String, List<String>> memo = new HashMap();
         return wb(s, new HashSet(wordDict), memo);
