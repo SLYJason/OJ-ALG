@@ -1,4 +1,4 @@
-package LeetCode.Search;
+package LeetCode.LC_401_600.LC505;
 
 import java.util.Queue;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 /**
  * Solution 2: BFS
  */
-public class LeetCode505_Sol2 {
+public class Solution_2 {
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         // distance[i][j] means the minimum number of steps required to reach the (i, j) starting from the current position

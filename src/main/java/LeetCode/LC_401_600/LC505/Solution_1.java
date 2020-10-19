@@ -1,11 +1,11 @@
-package LeetCode.Search;
+package LeetCode.LC_401_600.LC505;
 
 import java.util.Arrays;
 
 /**
  * Solution 1: DFS
  */
-public class LeetCode505_Sol1 {
+public class Solution_1 {
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
         // distance[i][j] means the minimum number of steps required to reach the (i, j) starting from the current position
         int[][] distance = new int[maze.length][maze[0].length];
