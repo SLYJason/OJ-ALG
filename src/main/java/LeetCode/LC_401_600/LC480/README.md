@@ -1,4 +1,4 @@
-# 295: Find Median from Data Stream
+# 480: Sliding Window Median
 
 Related: 
 
