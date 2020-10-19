@@ -1,8 +1,8 @@
-package LeetCode.Tree;
+package LeetCode.LC_401_600.LC572;
 
 import Shared.TreeNode;
 
-public class LeetCode572 {
+public class Solution_2 {
     public boolean isSubtree(TreeNode s, TreeNode t) {
         if(s == null) return false;
         if(isIdentical(s, t)) return true;
