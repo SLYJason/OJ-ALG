@@ -1,4 +1,4 @@
-package LeetCode.Search;
+package LeetCode.LC_401_600.LC490;
 
 import java.util.Queue;
 import java.util.LinkedList;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Solution 2: BFS
  */
-public class LeetCode490_Sol2 {
+public class Solution_2 {
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         int rows = maze.length, cols = maze[0].length;
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};

@@ -1,9 +1,9 @@
-package LeetCode.Search;
+package LeetCode.LC_401_600.LC490;
 
 /**
  * Solution 1: DFS
  */
-public class LeetCode490_Sol1 {
+public class Solution_1 {
     int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         return dfs(maze, start, destination, new boolean[maze.length][maze[0].length]);
