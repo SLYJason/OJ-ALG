@@ -1,10 +1,10 @@
-package LeetCode.Tree;
+package LeetCode.LC_401_600.LC543;
 
 import Shared.TreeNode;
 
 // Time Complexity: O(N)
 // Space Complexity: O(N)
-public class LeetCode543 {
+public class Solution {
     private int max = 0;
     public int diameterOfBinaryTree(TreeNode root) {
         dfs(root);
