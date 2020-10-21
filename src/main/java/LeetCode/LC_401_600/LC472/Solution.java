@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming;
+package LeetCode.LC_401_600.LC472;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -6,10 +6,10 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Arrays;
 
-public class LeetCode472 {
+public class Solution {
     public List<String> findAllConcatenatedWordsInADict(String[] words) {
         List<String> ans = new ArrayList();
-        Set<String> dict = new HashSet(Arrays.asList(words));
+        Set<String> dict = new HashSet(Arrays.asList(words)); // convert to Set to speed up lookup.
         for(String word : words) {
             if(word.length() == 0) continue;
             dict.remove(word);
@@ -27,7 +27,7 @@ public class LeetCode472 {
             for(int j=0; j<i; j++) {
                 if(dp[j] && dict.contains(s.substring(j, i))) {
                     dp[i] = true;
-                    break;
+                    break; // need to break the loop immediately, otherwise causing TLE.
                 }
             }
         }
