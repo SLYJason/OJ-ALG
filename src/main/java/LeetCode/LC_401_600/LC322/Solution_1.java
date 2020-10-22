@@ -1,8 +1,8 @@
-package LeetCode.DynamicProgramming;
+package LeetCode.LC_401_600.LC322;
 
 import java.util.Arrays;
 
-public class LeetCode322_Sol2 {
+public class Solution_1 {
     // Solution 1: Bottom up DP
     public int coinChange(int[] coins, int amount) {
         int[] count = new int[amount+1];

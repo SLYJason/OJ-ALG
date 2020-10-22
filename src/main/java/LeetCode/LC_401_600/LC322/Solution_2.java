@@ -1,6 +1,6 @@
-package LeetCode.DynamicProgramming;
+package LeetCode.LC_401_600.LC322;
 
-public class LeetCode322_Sol1 {
+public class Solution_2 {
     // Solution 1: Top down DP
     public int coinChange(int[] coins, int amount) {
         if(amount <= 0) return 0;
