@@ -1,12 +1,12 @@
-package LeetCode.Graph;
+package LeetCode.LC_601_800.LC797;
 
 import java.util.List;
 import java.util.LinkedList;
 
 /**
- * Solution 1: DFS
+ * Solution 1: DFS.
  */
-public class LeetCode797_Sol1 {
+public class Solution_1 {
     int[][] grapth;
     int target;
     List<List<Integer>> ans;

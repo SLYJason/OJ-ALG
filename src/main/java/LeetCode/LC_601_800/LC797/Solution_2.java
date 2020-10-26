@@ -1,4 +1,4 @@
-package LeetCode.Graph;
+package LeetCode.LC_601_800.LC797;
 
 import java.util.List;
 import java.util.LinkedList;
@@ -6,9 +6,9 @@ import java.util.Queue;
 import java.util.Arrays;
 
 /**
- * Solution 1: DFS
+ * Solution 1: BFS.
  */
-public class LeetCode797_Sol2 {
+public class Solution_2 {
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         int target = graph.length - 1;
         List<List<Integer>> ans = new LinkedList();
