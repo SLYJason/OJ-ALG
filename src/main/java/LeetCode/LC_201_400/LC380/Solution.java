@@ -1,4 +1,4 @@
-package LeetCode.Design;
+package LeetCode.LC_201_400.LC380;
 
 import java.util.Map;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class LeetCode380 {
+public class Solution {
     class RandomizedSet {
         Map<Integer, Integer> map;
         List<Integer> list;
