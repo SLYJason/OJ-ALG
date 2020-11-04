@@ -25,8 +25,8 @@ public class Solution {
 
                 int n1 = cur * 2;
                 int n2 = cur / 3;
-                if(!visited.contains(n1)) queue.offer(n1);
-                if(!visited.contains(n2)) queue.offer(n2);
+                if(visited.add(n1)) queue.offer(n1);
+                if(visited.add(n2)) queue.offer(n2);
             }
         }
         return 0;
