@@ -8,18 +8,18 @@ import java.util.ArrayList;
 public class AirMap {
     Map<String, List<String>> graph = new HashMap<>();
     public static void main(String args[] ) throws Exception {
-        AirMap s = new AirMap();
-        s.add_route("A", "B");
-        s.add_route("B", "A");
-        s.add_route("A", "C");
-        s.add_route("C", "A");
-        s.add_route("A", "D");
-        s.add_route("D", "A");
-        s.add_route("B", "C");
-        s.add_route("C", "B");
-        s.add_route("B", "D");
-        s.add_route("D", "B");
-        s.print_all_routes("C", "D");
+        AirMap airMap = new AirMap();
+        airMap.add_route("A", "B");
+        airMap.add_route("B", "A");
+        airMap.add_route("A", "C");
+        airMap.add_route("C", "A");
+        airMap.add_route("A", "D");
+        airMap.add_route("D", "A");
+        airMap.add_route("B", "C");
+        airMap.add_route("C", "B");
+        airMap.add_route("B", "D");
+        airMap.add_route("D", "B");
+        airMap.print_all_routes("C", "D");
     }
 
     private void add_route(String start, String destination) {
