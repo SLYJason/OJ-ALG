@@ -14,7 +14,7 @@ public class Solution_1 {
             }
             if(j-i == k) {
                 s = s.substring(0, i) + s.substring(j);
-                i=-1;
+                i = -1;
             }
         }
         return s;
