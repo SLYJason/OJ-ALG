@@ -1,4 +1,4 @@
-# 144: Binary Tree Preorder Traversal
+# 94: Binary Tree Inorder Traversal
 
 ### Solution 1: Recursive DFS
 Time Complexity: `O(N)`, N is the number of nodes.
