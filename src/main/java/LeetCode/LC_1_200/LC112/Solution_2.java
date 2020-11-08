@@ -1,12 +1,15 @@
-package LeetCode;
+package LeetCode.LC_1_200.LC112;
 
-import java.util.Stack;
+import Shared.TreeNode;
+import java.util.ArrayDeque;
 
-// iterative solution
-public class LeetCode112_Sol2 {
+/**
+ * Solution 2: iterative DFS.
+ */
+public class Solution_2 {
     public boolean hasPathSum(TreeNode root, int sum) {
         if(root == null) return false;
-        Stack<TreeNode> stack = new Stack();
+        ArrayDeque<TreeNode> stack = new ArrayDeque();
         stack.push(root);
         while(!stack.isEmpty()) {
             TreeNode currNode = stack.pop();

@@ -1,7 +1,11 @@
-package LeetCode;
+package LeetCode.LC_1_200.LC112;
 
-// recursive solution
-public class LeetCode112_Sol1 {
+import Shared.TreeNode;
+
+/**
+ * Solution 1: recursive DFS.
+ */
+public class Solution_1 {
     public boolean hasPathSum(TreeNode root, int sum) {
         if(root == null) return false;
         sum -= root.val;
