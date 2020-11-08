@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Solution {
+/**
+ * Solution 2: Iterative.
+ */
+public class Solution_2 {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null) return new ArrayList();
         List<List<Integer>> res = new ArrayList();

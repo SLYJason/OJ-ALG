@@ -10,7 +10,7 @@ Time Complexity: `O(N)`, N is the number of nodes.
 
 Space Complexity: `O(N)`, N is the number of nodes.
 
-### Related:
+### Related
 94: Binary Tree Inorder Traversal.
 
 144: Binary Tree Preorder Traversal.
