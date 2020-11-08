@@ -5,8 +5,7 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /**
- * Solution 2: iterative.
- * Keep in mind: LinkedList allows null, but ArrayDeque not.
+ * Solution 2: BFS.
  */
 public class Solution_2 {
     public boolean isSymmetric(TreeNode root) {

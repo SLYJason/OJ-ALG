@@ -3,7 +3,7 @@ package LeetCode.LC_1_200.LC101;
 import Shared.TreeNode;
 
 /**
- * Solution 1: recursive.
+ * Solution 1: DFS.
  */
 public class Solution_1 {
     public boolean isSymmetric(TreeNode root) {
