@@ -5,9 +5,6 @@ import java.util.ArrayList;
 
 /**
  * Solution 2: backtrack + DP.
- * N is the length of s.
- * Time Complexity: O(N^2 + 2^N) = O(2^N). N^2 comes from dp array generation.
- * Space Complexity: O(N^2). We need dp array.
  */
 public class Solution_2 {
     public List<List<String>> partition(String s) {

@@ -5,9 +5,6 @@ import java.util.ArrayList;
 
 /**
  * Solution 1: backtrack.
- * N is the length of s.
- * Time Complexity: O(N * 2^N), N is the length of s. For a string there will be (N-1) partitions, so it will has 2 ^ (N-1) partitions. And for isPalindrome(), time complexity is O(N), so total is O(N * 2^N).
- * Space Complexity: O(N).
  */
 public class Solution_1 {
     public List<List<String>> partition(String s) {
