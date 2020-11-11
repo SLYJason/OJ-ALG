@@ -1,11 +1,11 @@
-package LeetCode.Graph;
+package LeetCode.LC_1001_1200.LC1135;
 
 import java.util.Arrays;
 
 /**
- * Solution 3: Union-Find.
+ * Solution 2: Union Find Kruskal's Algorithm
  */
-public class LeetCode261_Sol3 {
+public class Solution_2 {
     public int minimumCost(int N, int[][] connections) {
         Arrays.sort(connections, (c1, c2) -> (c1[2] - c2[2])); // sort edge cost in ascending order.
         UnionFind uf = new UnionFind(N);
@@ -31,8 +31,8 @@ public class LeetCode261_Sol3 {
 
         public int find(int x) {
             if(parents[x] == x) return x;
-            parents[x] = find(parents[x]); // path compression
-            return parents[x];
+            int parent = parents[x];
+            return find(parent);
         }
 
         public boolean union(int x, int y) {
