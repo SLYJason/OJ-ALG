@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 /**
- * Solution 3: sliding window, another implementation.
+ * Solution 3: Sliding Window v3, using LC159 Solution_2 same logic.
  */
 public class Solution_3 {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {

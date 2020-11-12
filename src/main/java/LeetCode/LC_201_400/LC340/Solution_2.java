@@ -3,7 +3,7 @@ package LeetCode.LC_201_400.LC340;
 import java.util.Map;
 import java.util.HashMap;
 /**
- * Solution 2: sliding window.
+ * Solution 2: Sliding Window v2.
  */
 public class Solution_2 {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
