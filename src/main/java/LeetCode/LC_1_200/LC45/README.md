@@ -5,9 +5,9 @@ Using same logic in LC55 `Solution_2`. Causing Time Limit Exceeded but enough fo
 
 **Recurrence relation:** at any `end` position and any `start` position before `end`, `dp[end] = min(dp[end], dp[start]+1)` if `start + nums[start] >= end`.
 
-Time Complexity: `O(N^2)`.
+**Time Complexity:** `O(N^2)`.
 
-Space Complexity: `O(N^2)`.
+**Space Complexity:** `O(N^2)`.
 
 ### Solution 2: Greedy
 **Logic:** we keep updating the `max_position` we can reach from any index `i` when iterating the array. Keep recoding the boundary `end` and when we reach `end`, updated it and `steps++`.
@@ -24,9 +24,9 @@ i=3 max_position=4 end=4 steps=2
 
 Reference: [LeetCode-cn](https://leetcode-cn.com/problems/jump-game-ii/solution/tiao-yue-you-xi-ii-by-leetcode-solution/).
 
-Time Complexity: `O(N)`.
+**Time Complexity:** `O(N)`.
 
-Space Complexity: `O(1)`.
+**Space Complexity:** `O(1)`.
 
 ### Related
 55: Jump Game.

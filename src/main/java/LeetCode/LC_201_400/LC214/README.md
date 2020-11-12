@@ -10,6 +10,6 @@ abacd                   dcaba
 abac                    caba
 aba                     aba
 ```
-Time complexity: `O(N ^ 2)`, N is the length of the `s`.
+**Time complexity:** `O(N ^ 2)`, N is the length of the `s`.
 
-Space complexity: `O(N ^ 2)`, N is the length of the `s`.
+**Space complexity:** `O(N ^ 2)`, N is the length of the `s`.

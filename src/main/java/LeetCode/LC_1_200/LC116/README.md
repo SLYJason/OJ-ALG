@@ -1,9 +1,9 @@
 # 116: Populating Next Right Pointers in Each Node
 
 ### Solution 1: BFS
-Time Complexity: `O(N)`. `N` is the number of nodes.
+**Time Complexity:** `O(N)`. `N` is the number of nodes.
 
-Space Complexity: `O(N)`. `N` is the number of nodes.
+**Space Complexity:** `O(N)`. `N` is the number of nodes.
 
 ### Solution 2: DFS
 Using `preOrder` traversal, Complexity analysis is same as Solution 1.
@@ -15,9 +15,9 @@ For a given root node `a`, combine its child nodes is easy: `root.left.next = ro
 
 Reference: [Huahua](https://zxi.mytechroad.com/blog/tree/leetcode-116-populating-next-right-pointers-in-each-node/).
 
-Time Complexity: `O(N)`. `N` is the number of nodes.
+**Time Complexity:** `O(N)`. `N` is the number of nodes.
 
-Space Complexity: `O(1)`.
+**Space Complexity:** `O(1)`.
 
 ### Related
 116: Populating Next Right Pointers in Each Node.
