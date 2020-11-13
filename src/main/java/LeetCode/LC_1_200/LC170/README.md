@@ -14,3 +14,7 @@ There has a trade off of this problem, that is it should be **quick add** or **q
 167: Two Sum II - Input array is sorted.
 
 170: Two Sum III - Data structure design.
+
+653: Two Sum IV - Input is a BST.
+
+1099: Two Sum Less Than K.

@@ -1,9 +1,9 @@
-# 167: Two Sum II - Input array is sorted
+# 653: Two Sum IV - Input is a BST
 
 ### Solution
-**Time Complexity:** `O(N)`.
+**Time Complexity:** `O(N)`, N is the number of nodes.
 
-**Space Complexity:** `O(1)`.
+**Space Complexity:** `O(N)`, the worst case is the height of the BST can go up to `N`.
 
 ### Related
 1: Two Sum.
