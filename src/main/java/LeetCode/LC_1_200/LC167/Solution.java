@@ -1,6 +1,6 @@
-package LeetCode.Array;
+package LeetCode.LC_1_200.LC167;
 
-public class LeetCode167 {
+public class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int i = 0, j = numbers.length-1;
         while(i < j) {
