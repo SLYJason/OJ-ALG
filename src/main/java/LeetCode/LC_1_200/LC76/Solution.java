@@ -10,7 +10,7 @@ public class Solution {
         for(char ch : t.toCharArray()) t_count[ch]++;
 
         String res = ""; // final result.
-        int distance = 0; // distance used to measure numer of t's characters in window.
+        int distance = 0; // distance used to measure number of t's characters in window.
         int min_len = Integer.MAX_VALUE; // minimum window length.
         int i = 0, j = 0;
         int[] window = new int[128];
