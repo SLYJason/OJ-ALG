@@ -17,4 +17,6 @@ The logic is pretty similar to **LC76: Minimum Window Substring**, it needs to e
 
 325: Maximum Size Subarray Sum Equals k.
 
+560: Subarray Sum Equals K.
+
 862: Shortest Subarray with Sum at Least K.
