@@ -1,5 +1,10 @@
 # 209: Minimum Size Subarray Sum
 
+### LC209 and LC862 Difference
+Both 209 and 862 asks to find a contiguous subarray's sum >= K. However, LC209 only has positive numbers but LC862 has a mix of positive and negative numbers.
+
+In an interview, the 862 could be treated as a follow up.
+
 ### Solution 1: prefixSum + TreeMap
 **Time Complexity:** `O(N)`.
 
