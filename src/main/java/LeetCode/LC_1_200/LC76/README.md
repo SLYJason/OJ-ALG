@@ -15,3 +15,5 @@ The idea is maintain a window, expand the right pointer `j` as much as possible 
 438: Find All Anagrams in a String.
 
 567: Permutation in String.
+
+727: Minimum Window Subsequence.

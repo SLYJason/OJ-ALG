@@ -20,3 +20,5 @@ Using LC76 logic here, window size is keeping changing.
 438: Find All Anagrams in a String.
 
 567: Permutation in String.
+
+727: Minimum Window Subsequence.
