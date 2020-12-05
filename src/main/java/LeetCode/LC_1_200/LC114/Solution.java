@@ -4,23 +4,20 @@ import Shared.TreeNode;
 import java.util.ArrayDeque;
 
 /**
- * Solution: using PreOrder iterative traversal.
+ * Solution: preorder + iterative.
  */
 public class Solution {
     public void flatten(TreeNode root) {
         if(root == null) return;
-        TreeNode dummy = new TreeNode();
-        dummy.right = root;
-        TreeNode prev = dummy;
-
         ArrayDeque<TreeNode> stack = new ArrayDeque();
         stack.push(root);
+        TreeNode prev = new TreeNode();
+        prev.right = root;
         while(!stack.isEmpty()) {
             TreeNode cur = stack.pop();
-            prev.right = cur;
             prev.left = null;
+            prev.right = cur;
             prev = cur;
-
             if(cur.right != null) stack.push(cur.right);
             if(cur.left != null) stack.push(cur.left);
         }
