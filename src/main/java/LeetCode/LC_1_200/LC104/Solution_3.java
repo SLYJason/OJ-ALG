@@ -3,7 +3,7 @@ package LeetCode.LC_1_200.LC104;
 import Shared.TreeNode;
 
 /**
- * Solution 2: DFS, top-down.
+ * Solution 3: DFS, top-down.
  */
 public class Solution_3 {
     int max_depth = 0;
