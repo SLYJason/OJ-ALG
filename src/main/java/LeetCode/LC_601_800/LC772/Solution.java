@@ -1,4 +1,4 @@
-package LeetCode.LC_201_400.LC227;
+package LeetCode.LC_601_800.LC772;
 
 import java.util.ArrayDeque;
 
@@ -20,6 +20,12 @@ public class Solution {
                 }
                 continue; // find a number.
             }
+            if(ch == '(') {
+                int offset = findClosing(s.substring(i));
+                num = calculate(s.substring(i+1, i+offset));
+                i += offset;
+                continue; // find a parentheses sum.
+            }
             // ch is a sign.
             if(sign == '+') {
                 stack.push(num);
@@ -36,5 +42,16 @@ public class Solution {
         int sum = 0;
         while(!stack.isEmpty()) sum += stack.pop();
         return sum;
+    }
+
+    // find the closing ')', here only need to return the offset from '('.
+    private int findClosing(String s) {
+        int level = 0;
+        for(int i=0; i<s.length(); i++) {
+            if(s.charAt(i) == '(') level++;
+            if(s.charAt(i) == ')') level--;
+            if(level == 0) return i;
+        }
+        return -1;
     }
 }
