@@ -18,3 +18,10 @@ An exception need to handle is `0` row and `0` column, if any `matrix[r][0] == 0
 **Time Complexity:** `O(M * N)`.
 
 **Space Complexity:** `O(1)`.
+
+### Related
+Both of them using matrix tricks.
+
+73: Set Matrix Zeroes.
+
+289: Game of Life.
