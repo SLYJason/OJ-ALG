@@ -9,7 +9,7 @@ import java.util.HashMap;
 /**
  * Solution: max-heap.
  */
-public class LeetCode692 {
+public class Solution_2 {
     public List<String> topKFrequent(String[] words, int k) {
         List<String> res = new ArrayList<>();
         Map<String, Integer> wordCount = new HashMap();
