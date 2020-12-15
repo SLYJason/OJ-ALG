@@ -20,6 +20,8 @@ rand in [10, 14], index = 3;
 **Space Complexity:** construction takes `O(N)`, `pickIndex` takes `O(1)`.
 
 ### Related
+382: Linked List Random Node.
+
 398: Random Pick Index.
 
 528: Random Pick with Weight.
