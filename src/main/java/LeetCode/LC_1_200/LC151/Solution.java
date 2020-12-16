@@ -1,6 +1,9 @@
-package LeetCode;
+package LeetCode.LC_1_200.LC151;
 
-public class LeetCode151 {
+/**
+ * Solution: two-pointers.
+ */
+public class Solution {
     public String reverseWords(String s) {
         StringBuilder reversed = new StringBuilder();
         for(int start=s.length()-1; start>-1; start--) {
