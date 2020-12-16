@@ -1,13 +1,11 @@
-package LeetCode.HashMap;
+package LeetCode.LC_1_200.LC49;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
 
-public class LeetCode49 {
-    // Time Complexity: O(KN), N is the length of strs, K is the maximum length of a string in strs
-    // Space Complexity: O(KN)
+public class Solution_2 {
     public List<List<String>> groupAnagrams(String[] strs) {
         if(strs == null || strs.length == 0) return new ArrayList();
         Map<String, List> map = new HashMap();
