@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Solution 1: Recursive.
+ * Solution 1: DFS.
  */
 public class Solution_1 {
     List<List<Integer>> res = new ArrayList();
