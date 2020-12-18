@@ -1,6 +1,6 @@
 package LeetCode.LC_1_200.LC125;
 
-public class LeetCode125 {
+public class Solution {
     public boolean isPalindrome(String s) {
         if(s.length() == 0 || s.length() == 1) return true;
         int i=0, j=s.length()-1;

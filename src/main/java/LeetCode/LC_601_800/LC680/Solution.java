@@ -1,9 +1,9 @@
 package LeetCode.LC_601_800.LC680;
 
 /**
- * Solution 1: iterative solution.
+ * Solution 1: two pointers.
  */
-public class LeetCode680_Sol1 {
+public class Solution {
     public boolean validPalindrome(String s) {
         int left = 0, right = s.length()-1;
         while(left < right && s.charAt(left) == s.charAt(right)) {

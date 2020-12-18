@@ -1,9 +1,9 @@
 package LeetCode.LC_601_800.LC680;
 
 /**
- * Solution 2: includes follow up.
+ * Follow Up.
  */
-public class LeetCode680_Sol2 {
+public class FollowUp {
     public boolean validPalindrome(String s) {
         return isPalindrome(s, 0, s.length()-1, 1); // d means the number of characters can be deleted
     }
