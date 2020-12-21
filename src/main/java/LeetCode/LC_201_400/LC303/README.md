@@ -10,4 +10,4 @@
 
 304: Range Sum Query 2D - Immutable.
 
-307: Range Sum Query - Mutable
+307: Range Sum Query - Mutable.
