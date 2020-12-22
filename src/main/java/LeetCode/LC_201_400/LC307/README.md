@@ -20,6 +20,17 @@ A couple of important feature of segment tree are:
 
 Reference: [Stack Overflow](https://stackoverflow.com/questions/28470692/how-is-the-memory-of-the-array-of-segment-tree-2-2-ceillogn-1).
 
+### Solution 2: Binary Indexed Tree
+**Time Complexity:**
+* `construction` takes `O(N * logN)`.
+* `update` takes `O(logN)`.
+* `sumRange` takes `O(logN)`.
+
+**Space Complexity:**
+* `construction` takes `O(N)`.
+* `update` takes `O(1)`.
+* `sumRange` takes `O(1)`.
+
 ### Related
 303: Range Sum Query - Immutable.
 
