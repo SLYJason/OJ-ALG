@@ -11,6 +11,6 @@ Using BST properties: `left` < `root` < `right`. Compare `root` with `p` to dete
 How to find the inorder predecessor in BST?
 
 ### Related
-510: Inorder Successor in BST II.
-
 285: Inorder Successor in BST.
+
+510: Inorder Successor in BST II.
