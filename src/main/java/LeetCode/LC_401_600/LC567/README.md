@@ -15,6 +15,8 @@ Using LC76 logic here, window size is keeping changing.
 **Space Complexity**: `O(1)`.
 
 ### Related
+30: Substring with Concatenation of All Words.
+
 76: Minimum Window Substring.
 
 438: Find All Anagrams in a String.

@@ -10,6 +10,8 @@ Then the next step is to go back to find the minimum matched length in `S`. Decr
 **Space Complexity:** `O(1)`.
 
 ### Related
+30: Substring with Concatenation of All Words.
+
 76: Minimum Window Substring.
 
 438: Find All Anagrams in a String.
