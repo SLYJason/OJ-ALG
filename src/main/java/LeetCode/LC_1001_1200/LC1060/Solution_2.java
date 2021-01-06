@@ -1,5 +1,8 @@
 package LeetCode.LC_1001_1200.LC1060;
 
+/**
+ * Solution 2: binary search.
+ */
 public class Solution_2 {
     public int missingElement(int[] nums, int k) {
         int n = nums.length;

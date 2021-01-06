@@ -1,6 +1,6 @@
 # 1060: Missing Element in Sorted Array
 
-### Solution 1: Linear
+### Solution 1: Linear Search
 **Time Complexity:** `O(N)`.
 
 **Space Complexity:** `O(1)`.
@@ -16,3 +16,8 @@ Using this logic, we compare `mid` with `left` missing numbers with `k` every ti
 **Time Complexity:** `O(logN)`.
 
 **Space Complexity:** `O(1)`.
+
+### Related
+1060: Missing Element in Sorted Array.
+
+1539: Kth Missing Positive Number.
