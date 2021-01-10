@@ -25,3 +25,8 @@ Reversed: [2, 1, 6, 2, 5], rank_frequency = [0, 0, 0, 0, 0]
  3 |      2      |   2    |   [0, 1, 2, 0, 1]  |      1     |
  4 |      5      |   3    |   [0, 1, 2, 1, 1]  |      3     |
 ```
+
+### Related  
+315: Count of Smaller Numbers After Self.
+
+1649: Create Sorted Array through Instructions.
