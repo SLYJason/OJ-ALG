@@ -1,8 +1,9 @@
-package LeetCode;
+package LeetCode.LC_1_200.LC88;
 
-import java.util.Arrays;
-
-public class LeetCode88 {
+/**
+ * Solution: two pointers.
+ */
+public class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1; // nums1 pointer
         int p2 = n - 1; // nums2 pointer
@@ -16,13 +17,7 @@ public class LeetCode88 {
             }
         }
 
-        // nums1 all placed in right place, but num2 still not
+        // nums1 all placed in right place, but num2 still not.
         while (p2 > -1) nums1[p--] = nums2[p2--];
-    }
-
-    // Not a good one
-    public void mergeSol2(int[] nums1, int m, int[] nums2, int n) {
-        System.arraycopy(nums2, 0, nums1, m, n);
-        Arrays.sort(nums1);
     }
 }
