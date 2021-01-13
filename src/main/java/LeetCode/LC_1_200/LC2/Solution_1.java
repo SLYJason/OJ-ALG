@@ -2,7 +2,10 @@ package LeetCode.LC_1_200.LC2;
 
 import Shared.ListNode;
 
-public class Solution {
+/**
+ * Solution 1: O(N) space.
+ */
+public class Solution_1 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
         ListNode p1 = l1, p2 = l2;
