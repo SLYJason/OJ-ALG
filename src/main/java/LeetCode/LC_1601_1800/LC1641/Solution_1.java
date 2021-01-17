@@ -1,25 +1,19 @@
 package LeetCode.LC_1601_1800.LC1641;
 
 /**
- * Solution 1: brute force, concise solution.
+ * Solution 1: DFS.
  */
 public class Solution_1 {
-    int count = 0;
     public int countVowelStrings(int n) {
-        dfs(0, n, 0);
-        return count;
+        return dfs(0, 5, n);
     }
 
-    private void dfs(int start, int n, int len) {
-        if(len == n) {
-            count++;
-            return;
+    private int dfs(int pos, int choices, int n) {
+        if(pos == n) return 1;
+        int count = 0;
+        for(int i = choices; i > 0; i--) {
+            count += dfs(pos + 1, i, n);
         }
-
-        for(int i=start; i<5; i++) {
-            len++;
-            dfs(i, n, len);
-            len--;
-        }
+        return count;
     }
 }
