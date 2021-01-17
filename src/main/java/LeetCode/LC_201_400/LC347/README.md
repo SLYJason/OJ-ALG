@@ -1,7 +1,6 @@
 # 347: Top K Frequent Elements
 
-Related:
-
+### Related:
 215: Kth Largest Element in an Array.
 
 347: Top K Frequent Elements.

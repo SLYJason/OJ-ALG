@@ -1,30 +1,35 @@
 package LeetCode.LC_201_400.LC215;
 
+/**
+ * Solution: quick select.
+ */
 public class Solution_2 {
     public int findKthLargest(int[] nums, int k) {
-        int start = 0, end = nums.length-1, index = -1;
-        while(index != nums.length - k) {
-            index = quickSelect(nums, start, end);
-            if(index < nums.length - k) {
-                start = index + 1;
+        int n = nums.length;
+        int left = 0, right = n - 1;
+        while(left <= right) {
+            int pos = quickSelect(nums, left, right);
+            if(k == n - pos) return nums[pos];
+            if(k > n - pos) {
+                right = pos - 1;
             } else {
-                end = index - 1;
+                left = pos + 1;
             }
         }
-        return nums[index];
+        return -1;
     }
 
-    private int quickSelect(int[] nums, int start, int end) {
-        int i=start+1, j=start+1;
-        int pivot = nums[start];
-        while(j<=end) {
-            if(nums[j] < pivot) {
+    private int quickSelect(int[] nums, int left, int right) {
+        int pivot = nums[left];
+        int i = left + 1, j = left + 1;
+        while(j <= right) {
+            if(nums[j] <= pivot) {
                 swap(nums, i, j);
                 i++;
             }
             j++;
         }
-        swap(nums, start, --i);
+        swap(nums, left, --i);
         return i;
     }
 

@@ -3,15 +3,15 @@ package LeetCode.LC_201_400.LC215;
 import java.util.PriorityQueue;
 
 /**
- * Solution 1: min-heap.
+ * Solution 1: min heap.
  */
 public class Solution_1 {
     public int findKthLargest(int[] nums, int k) {
-        PriorityQueue<Integer> minHeap = new PriorityQueue();
+        PriorityQueue<Integer> min_heap = new PriorityQueue<>();
         for(int num : nums) {
-            minHeap.offer(num);
-            if(minHeap.size() > k) minHeap.poll();
+            min_heap.offer(num);
+            if(min_heap.size() > k) min_heap.poll();
         }
-        return minHeap.peek();
+        return min_heap.peek();
     }
 }
