@@ -24,3 +24,5 @@ Initially think we can't sort them because we need to meet `i < j`, so using `Tr
 653: Two Sum IV - Input is a BST.
 
 1099: Two Sum Less Than K.
+
+1679: Max Number of K-Sum Pairs.

@@ -18,3 +18,5 @@ There has a trade off of this problem, that is it should be **quick add** or **q
 653: Two Sum IV - Input is a BST.
 
 1099: Two Sum Less Than K.
+
+1679: Max Number of K-Sum Pairs.

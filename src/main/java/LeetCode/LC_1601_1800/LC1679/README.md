@@ -1,9 +1,18 @@
-# 1: Two Sum
+# 1679: Max Number of K-Sum Pairs
 
-### Solution
+### Solution 1: HashMap
+Using Two Sum logic, only need one pass.
+
 **Time Complexity:** `O(N)`.
 
 **Space Complexity:** `O(N)`.
+
+### Solution 2: Two Pointers
+Sort it first then using two pointers.
+
+**Time Complexity:** `O(N * logN)`.
+
+**Space Complexity:** `O(1)`.
 
 ### Related
 1: Two Sum.
