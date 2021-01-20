@@ -3,9 +3,9 @@ package LeetCode.LC_1_200.LC20;
 import java.util.ArrayDeque;
 
 /**
- * Solution: stack.
+ * Solution 1: verbose stack.
  */
-public class Solution {
+public class Solution_1 {
     public boolean isValid(String s) {
         ArrayDeque<Character> stack = new ArrayDeque();
         for(char ch : s.toCharArray()) {
