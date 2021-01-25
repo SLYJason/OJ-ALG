@@ -1,14 +1,18 @@
-package LeetCode.HashMap;
+package LeetCode.LC_1201_1400.LC1249;
 
-import java.util.Stack;
-public class LeetCode1249 {
+import java.util.ArrayDeque;
+
+/**
+ * Solution: stack.
+ */
+public class Solution {
     public String minRemoveToMakeValid(String s) {
         StringBuilder sb = new StringBuilder(s);
-        Stack<int[]> stack = new Stack();
+        ArrayDeque<Integer> stack = new ArrayDeque();
         for(int i=0; i<sb.length(); i++) {
             char ch = sb.charAt(i);
             if(ch == '(') {
-                stack.push(new int[]{ch, i});
+                stack.push(i);
             } else if (ch == ')') {
                 if(stack.isEmpty()) {
                     sb.deleteCharAt(i);
@@ -19,7 +23,7 @@ public class LeetCode1249 {
             }
         }
         while(!stack.isEmpty()) {
-            sb.deleteCharAt(stack.pop()[1]);
+            sb.deleteCharAt(stack.pop());
         }
         return sb.toString();
     }

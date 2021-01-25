@@ -1,11 +1,6 @@
-# 20: Valid Parentheses
+# 1249: Minimum Remove to Make Valid Parentheses
 
-### Solution 1: Verbose Stack
-**Time Complexity:** `O(N)`.
-
-**Space Complexity:** `O(N)`.
-
-### Solution 2: Concise Stack
+### Solution: Stack 
 **Time Complexity:** `O(N)`.
 
 **Space Complexity:** `O(N)`.
