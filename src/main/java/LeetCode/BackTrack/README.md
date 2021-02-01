@@ -5,7 +5,7 @@
 
 31 (Medium): Next Permutations, need to use some trick here.
 
-![chart](LeetCode31.png)
+![chart](../LC_1_200/LC31/LC31.png)
 
 60 (Hard): Permutation Sequence, need to use some trick here.
 
