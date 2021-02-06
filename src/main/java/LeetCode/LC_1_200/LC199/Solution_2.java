@@ -9,8 +9,8 @@ import java.util.ArrayList;
  */
 public class Solution_2 {
     public List<Integer> rightSideView(TreeNode root) {
-        if(root == null) return new ArrayList();
-        List<Integer> res = new ArrayList();
+        if(root == null) return new ArrayList<>();
+        List<Integer> res = new ArrayList<>();
         rightView(root, 0, res);
         return res;
     }
