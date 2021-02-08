@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Solution 2: BFS, search from all gates .
  */
-public class LeetCode286_Sol2 {
+public class Solution_2 {
     public void wallsAndGates(int[][] rooms) {
         if(rooms.length == 0) return;
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};

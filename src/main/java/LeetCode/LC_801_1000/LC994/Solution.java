@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Solution: BFS
  */
-public class LeetCode994 {
+public class Solution {
     public int orangesRotting(int[][] grid) {
         int[][] directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
         int rows = grid.length, cols = grid[0].length;

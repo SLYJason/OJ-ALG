@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Solution 1: BFS, intuitive thought, use a extract space to track visited node.
  */
-public class LeetCode286_Sol1 {
+public class Solution_1 {
     public void wallsAndGates(int[][] rooms) {
         if(rooms.length == 0) return;
         int rows = rooms.length;

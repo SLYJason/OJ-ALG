@@ -1,12 +1,13 @@
 # 695: Max Area of Island
 
-Related: 
-
+### Related
 200: Number of Islands.
 
 286: Walls and Gates.
 
 542: 01 Matrix.
+
+694: Number of Distinct Islands.
 
 695: Max Area of Island.
 
