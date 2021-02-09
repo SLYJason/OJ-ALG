@@ -3,7 +3,7 @@ package LeetCode.LC_201_400.LC284;
 import java.util.Iterator;
 
 /**
- * Solution 2: using Iterator properties.
+ * Solution 2: iterator properties.
  */
 public class Solution_2 {
     class PeekingIterator implements Iterator<Integer> {
@@ -12,9 +12,7 @@ public class Solution_2 {
         public PeekingIterator(Iterator<Integer> iterator) {
             // initialize any member here.
             ite = iterator;
-            if(iterator.hasNext()) {
-                peek = iterator.next();
-            }
+            peek = iterator.hasNext() ? iterator.next() : null;
         }
 
         // Returns the next element in the iteration without advancing the iterator.

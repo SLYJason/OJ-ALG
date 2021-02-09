@@ -3,7 +3,7 @@ package LeetCode.LC_201_400.LC284;
 import java.util.Iterator;
 
 /**
- * Solution 1: brute force. Built a customized LinkedList.
+ * Solution 1: brute force.
  */
 public class Solution_1 {
     class PeekingIterator implements Iterator<Integer> {
