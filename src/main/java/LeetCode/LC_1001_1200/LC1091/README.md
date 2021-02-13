@@ -1,5 +1,12 @@
 # 1091: Shortest Path in Binary Matrix
 
+### Solution 1: BFS
+This method modifying the input `0 -> 1` to mark visited cell, however it is not a good practice. We can use `visited` boolean array instead.
+
+**Time Complexity:** `O(N)`.
+
+**Space Complexity:** `O(N)`.
+
 ### Related
 200: Number of Islands.
 

@@ -4,29 +4,30 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /**
- * Solution: BFS.
+ * Solution 1: BFS.
  */
 public class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
         int N = grid.length;
-        if(grid[0][0] == 1 || grid[N-1][N-1] == 1) return -1;
-        if(N == 1 && grid[0][0] == 0) return 1; // handle [[0]] special case.
-        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
-        Queue<int[]> queue = new LinkedList();
+        if(grid[0][0] != 0 || grid[N-1][N-1] != 0) return -1; // base case.
+        int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
+        Queue<int[]> queue = new LinkedList<>();
         queue.offer(new int[]{0, 0});
-        int distance = 1;
-        grid[0][0] = 1; // mark [0, 0] as 1 means it has been visited.
+        grid[0][0] = 1;
+        int dist = 0;
         while(!queue.isEmpty()) {
-            distance++;
+            dist++;
             for(int i=queue.size(); i>0; i--) {
-                int[] cur = queue.poll();
-                for(int[] d : directions) {
-                    int nx = cur[0] + d[0];
-                    int ny = cur[1] + d[1];
-                    if(nx >= 0 && nx < N && ny >= 0 && ny < N && grid[nx][ny] == 0) {
-                        if(nx == N-1 && ny == N-1) return distance;
-                        grid[nx][ny] = 1;
-                        queue.offer(new int[]{nx, ny});
+                int[] point = queue.poll();
+                int r = point[0];
+                int c = point[1];
+                if(r == N - 1 && c == N - 1) return dist; // reach the destination.
+                for(int[] d : dirs) {
+                    int nr = r + d[0];
+                    int nc = c + d[1];
+                    if(nr >= 0 && nr < N && nc >= 0 && nc < N && grid[nr][nc] == 0) {
+                        grid[nr][nc] = 1; // Important: mark neighbor visited immediately.
+                        queue.offer(new int[]{nr, nc});
                     }
                 }
             }
