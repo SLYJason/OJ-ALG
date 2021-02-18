@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Solution 1: BFS.
  */
-public class Solution {
+public class Solution_1 {
     public int shortestPathBinaryMatrix(int[][] grid) {
         int N = grid.length;
         if(grid[0][0] != 0 || grid[N-1][N-1] != 0) return -1; // base case.

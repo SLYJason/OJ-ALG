@@ -7,6 +7,11 @@ This method modifying the input `0 -> 1` to mark visited cell, however it is not
 
 **Space Complexity:** `O(N)`.
 
+### Solution 2: Dijkstra Algorithm
+**Time Complexity:** `O(MN * logMN)`.
+
+**Space Complexity:** `O(M * N)`.
+
 ### Related
 200: Number of Islands.
 
