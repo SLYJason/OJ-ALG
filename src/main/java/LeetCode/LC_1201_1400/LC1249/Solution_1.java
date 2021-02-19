@@ -3,9 +3,9 @@ package LeetCode.LC_1201_1400.LC1249;
 import java.util.ArrayDeque;
 
 /**
- * Solution: stack.
+ * Solution 1: stack.
  */
-public class Solution {
+public class Solution_1 {
     public String minRemoveToMakeValid(String s) {
         StringBuilder sb = new StringBuilder(s);
         ArrayDeque<Integer> stack = new ArrayDeque();
