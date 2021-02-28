@@ -1,5 +1,8 @@
 package LeetCode.LC_1_200.LC29;
 
+/**
+ * Solution 2: bit manipulation.
+ */
 public class Solution_2 {
     public int divide(int dividend, int divisor) {
         if(dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;

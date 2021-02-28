@@ -38,3 +38,16 @@ So final quotient = 8 + 1 = 9.
 
 **Space Complexity:** `O(1)`.
 
+### Solution 3: Bit Manipulation - Use Long
+Similar to Solution_2 instead of using `long` data type here, against the problem rules but good for interview. Here also use the `XOR` trick to determine the result is positive or negative.
+
+|   A    |    B    | A XOR B |
+| :----: | :-----: | :-----: |
+|  true  |  true   |  false  |
+|  true  |  false  |  true   |
+|  false |  true   |  true   |
+|  false |  false  |  false  |
+
+**Time Complexity:** `O(logN)`.
+
+**Space Complexity:** `O(1)`.

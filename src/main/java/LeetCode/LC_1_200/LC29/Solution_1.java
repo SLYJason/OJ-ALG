@@ -1,5 +1,8 @@
 package LeetCode.LC_1_200.LC29;
 
+/**
+ * Solution 1: brute force.
+ */
 public class Solution_1 {
     public int divide(int dividend, int divisor) {
         if(dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE; // corner case: -2147483648 / -1.
