@@ -3,7 +3,7 @@ package LeetCode.LC_201_400.LC376;
 /**
  * Solution 1: 2D DP
  */
-public class Solution {
+public class Solution_1 {
     public int wiggleMaxLength(int[] nums) {
         if(nums.length < 2) return nums.length;
         int n = nums.length;
