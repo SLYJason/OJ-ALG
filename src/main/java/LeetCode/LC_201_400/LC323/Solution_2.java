@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Solution 2: BFS.
+ */
 public class Solution_2 {
     public int countComponents(int n, int[][] edges) {
         List<List<Integer>> graph = new ArrayList();
@@ -27,7 +30,7 @@ public class Solution_2 {
     }
 
     private void bfs(int cur, List<List<Integer>> graph, boolean[] visited) {
-        Queue<Integer> queue = new LinkedList();
+        Queue<Integer> queue = new LinkedList<>();
         queue.offer(cur);
         while(!queue.isEmpty()) {
             int n = queue.poll();

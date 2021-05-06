@@ -49,7 +49,11 @@ h = sqrt((current_cell.x – goal.x) ^ 2 + (current_cell.y – goal.y) ^ 2));
 
 286: Walls and Gates.
 
+323: Number of Connected Components in an Undirected Graph.
+
 542: 01 Matrix.
+
+547: Number of Provinces.
 
 694: Number of Distinct Islands.
 

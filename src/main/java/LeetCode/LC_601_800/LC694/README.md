@@ -23,7 +23,11 @@ For same two islands, any cell row's difference and column's difference to its o
 
 286: Walls and Gates.
 
+323: Number of Connected Components in an Undirected Graph.
+
 542: 01 Matrix.
+
+547: Number of Provinces.
 
 694: Number of Distinct Islands.
 
