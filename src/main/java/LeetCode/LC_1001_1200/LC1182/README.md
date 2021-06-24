@@ -19,3 +19,14 @@ So we have to compare the distance between `start` with `list.get(left)` and `st
 Initialization takes `O(N)` time and each query binary search takes `logN` time, so total is `O(QlogN)`.
 
 **Space Complexity:** `O(N)`.
+
+### Solution 2: Two Way Scan
+Scan left -> right, find the shortest distance between the current index to the most left color. 
+Scan right -> left, find the shortest distance between the current index to the most right color. In the meantime, find the minimum distance.
+
+Example:
+![chart](LC1182_Sol2.png)
+
+**Time Complexity:** `O(N + Q)`, `Q` is the length of the queries, `N` is the length of the `colors`.
+
+**Space Complexity:** `O(N)`.
