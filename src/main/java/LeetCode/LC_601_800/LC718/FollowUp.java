@@ -4,27 +4,27 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Follow up
+ * Follow up: How to Get the Maximum Repeated Subarray?
  */
 public class FollowUp {
-    public int[] findArray(int[] A, int[] B) {
-        int[][] dp = new int[A.length+1][B.length+1];
+    public int[] findArray(int[] nums1, int[] nums2) {
+        int[][] dp = new int[nums1.length + 1][nums2.length + 1];
         int max_length = 0, end_index = 0;
         List<Integer> res = new ArrayList<>();
-        for(int i=1; i<A.length+1; i++) {
-            for(int j=1; j<B.length+1; j++) {
-                dp[i][j] = A[i-1] == B[j-1] ? dp[i-1][j-1] + 1 : 0;
+        for(int i = 1; i < nums1.length + 1; i++) {
+            for(int j = 1; j < nums2.length + 1; j++) {
+                dp[i][j] = nums1[i - 1] == nums2[j - 1] ? dp[i - 1][j - 1] + 1 : 0;
                 if(dp[i][j] > max_length) {
                     max_length = dp[i][j];
-                    end_index = i-1;
+                    end_index = i - 1;
                 }
             }
         }
         // no common
         if(max_length == 0) return new int[0];
         // build the result.
-        for(int i=end_index; i > end_index-max_length; i--) {
-            res.add(0, A[i]);
+        for(int i = end_index; i > end_index - max_length; i--) {
+            res.add(0, nums1[i]);
         }
         return res.stream().mapToInt(i -> i).toArray();
     }
