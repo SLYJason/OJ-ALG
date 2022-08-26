@@ -2,6 +2,9 @@ package LeetCode.LC_1_200.LC19;
 
 import Shared.ListNode;
 
+/**
+ * Solution 1: Two Pass.
+ */
 public class Solution_1 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null) {
