@@ -8,10 +8,10 @@ import Shared.TreeNode;
 public class Solution_2 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         TreeNode parent = root;
-        while(parent != null) {
-            if(p.val < parent.val && q.val < parent.val) {
+        while (parent != null) {
+            if (p.val <= parent.val && q.val <= parent.val) {
                 parent = parent.left;
-            } else if(p.val > parent.val && q.val > parent.val) {
+            } else if (p.val > parent.val && q.val > parent.val) {
                 parent = parent.right;
             } else {
                 return parent;
