@@ -2,12 +2,12 @@
   "name": "hubspot",
   "version": "1.0.0",
   "description": "hubspot oa",
-  "main": "solution.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "Luyi Song",
   "license": "ISC",
+  "scripts": {
+    "sessions": "node sessions.js",
+    "conversations": "node conversations.js"
+  },
   "dependencies": {
     "axios": "^0.27.2"
   }
