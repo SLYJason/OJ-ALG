@@ -15,6 +15,13 @@ Then take the first `k` numbers from the `sorted` array and sort it again, so it
 
 **Space Complexity:** `O(N)`.
 
+### Solution 3: Binary Search to Find the Left Bound
+Given it is a sorted array, what is the biggest index of the left bound of the result? The upper limit of the left bound is `arr.length - k`. Using the binary search in the range [0, arr.length - k] to find the left boundary.
+
+**Time complexity**: `O(log(N - k) + k)`. Find the boundary takes `O(log(N - k))` and then takes `O(k)` build the result.
+
+**Space Complexity:** `O(1)`.
+
 ### Related
 658: Find K Closest Elements.
 
