@@ -12,7 +12,7 @@ public class Solution_3 {
         if (s.length() <= 1) return s.length();
         Map<Character, Integer> map = new HashMap<>();
         int max = 0;
-        for (int i=0, j=0; j<s.length(); ++j){
+        for (int i = 0, j = 0; j < s.length(); j++){
             if (map.containsKey(s.charAt(j))){
                 i = Math.max(i, map.get(s.charAt(j)) + 1); // to see why max here, consider 'abba' for example.
             }

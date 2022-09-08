@@ -8,12 +8,12 @@ import java.util.HashSet;
  */
 public class Solution_2 {
     public int lengthOfLongestSubstring(String s) {
-        if(s.length() <= 1) return s.length();
+        if (s.length() <= 1) return s.length();
         char[] S = s.toCharArray();
         int i = 0, j = 0, max_length = 0;
         Set<Character> window = new HashSet<>();
-        while(j < s.length()) {
-            if(!window.contains(S[j])) {
+        while (j < s.length()) {
+            if (!window.contains(S[j])) {
                 window.add(S[j++]);
                 max_length = Math.max(max_length, j - i);
             } else {
