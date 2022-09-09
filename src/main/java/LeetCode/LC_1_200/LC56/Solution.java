@@ -1,29 +1,29 @@
 package LeetCode.LC_1_200.LC56;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.LinkedList;
+import java.util.Comparator;
 
 /**
- * Solution: sorting each interval start index.
- * Time Complexity: O(n log(n)).
- * Space Complexity: O(1).
+ * Solution: sorting + merge.
  */
 public class Solution {
     public int[][] merge(int[][] intervals) {
-        if(intervals.length < 2) return intervals;
-        List<int[]> list = new LinkedList();
-        Arrays.sort(intervals, (i1, i2) -> i1[0] - i2[0]);
-        int[] curr = intervals[0];
-        for(int[] interval : intervals) {
-            if(interval[0] <= curr[1]) {
-                curr[1] = Math.max(curr[1], interval[1]);
-            } else {
-                list.add(curr);
-                curr = interval;
+        if (intervals.length < 2) return intervals;
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+        LinkedList<int[]> list = new LinkedList<>();
+        list.add(intervals[0]);
+        for (int i = 1; i < intervals.length; i++) {
+            int curStart = intervals[i][0];
+            int curEnd = intervals[i][1];
+            int[] lastInterval = list.getLast();
+            int lastEnd = lastInterval[1];
+            if (curStart <= lastEnd && curEnd > lastEnd) {
+                lastInterval[1] = curEnd; // it means: ---curStart---lastEnd---curEnd---, should change the last interval end.
+            } else if (curStart > lastEnd) {
+                list.add(intervals[i]); // it means: ---lastEnd---curStart---, should append the new interval
             }
         }
-        list.add(curr);
         return list.toArray(new int[list.size()][2]);
     }
 }
