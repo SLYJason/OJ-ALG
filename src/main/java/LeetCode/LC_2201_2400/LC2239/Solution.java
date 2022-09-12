@@ -1,4 +1,4 @@
-package LeetCode.LC_2201_2400;
+package LeetCode.LC_2201_2400.LC2239;
 
 public class Solution {
     public int findClosestNumber(int[] nums) {

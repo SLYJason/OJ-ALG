@@ -9,18 +9,18 @@ import java.util.ArrayDeque;
 public class Solution_2 {
     public boolean hasPathSum(TreeNode root, int sum) {
         if(root == null) return false;
-        ArrayDeque<TreeNode> stack = new ArrayDeque();
+        ArrayDeque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             TreeNode currNode = stack.pop();
-            if(currNode.left == null && currNode.right == null && currNode.val == sum) {
+            if (currNode.left == null && currNode.right == null && currNode.val == sum) {
                 return true;
             }
-            if(currNode.right != null) {
+            if (currNode.right != null) {
                 currNode.right.val += currNode.val;
                 stack.push(currNode.right);
             }
-            if(currNode.left != null) {
+            if (currNode.left != null) {
                 currNode.left.val += currNode.val;
                 stack.push(currNode.left);
             }
