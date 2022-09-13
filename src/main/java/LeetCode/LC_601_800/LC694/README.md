@@ -37,3 +37,5 @@ For same two islands, any cell row's difference and column's difference to its o
 
 1091: Shortest Path in Binary Matrix.
 
+1254: Number of Closed Islands.
+

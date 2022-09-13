@@ -39,3 +39,5 @@ Assuming `n` is number of nodes, `m` is the number of edges.
 994: Rotting Oranges.
 
 1091: Shortest Path in Binary Matrix.
+
+1254: Number of Closed Islands.
