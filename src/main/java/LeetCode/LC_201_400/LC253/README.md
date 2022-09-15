@@ -1,11 +1,19 @@
 # 253: Meeting Rooms II
 
-Related:
+### Solution: PriorityQueue
+**Time Complexity:** `O(N * logN)`.
 
+**Space Complexity:** `O(N)`.
+
+### Related
 56: Merge Intervals.
 
-57. Insert Interval.
+57: Insert Interval.
 
 252: Meeting Rooms.
 
 253: Meeting Rooms II.
+
+616: Add Bold Tag in StringAdd Bold Tag in String.
+
+758: Bold Words in String.

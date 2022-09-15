@@ -1,11 +1,19 @@
 # 252: Meeting Rooms
 
-Related:
+### Solution: Sorting
+**Time Complexity:** `O(N * logN)`.
 
+**Space Complexity:** `O(1)`.
+
+### Related
 56: Merge Intervals.
 
-57. Insert Interval.
+57: Insert Interval.
 
 252: Meeting Rooms.
 
 253: Meeting Rooms II.
+
+616: Add Bold Tag in StringAdd Bold Tag in String.
+
+758: Bold Words in String.
