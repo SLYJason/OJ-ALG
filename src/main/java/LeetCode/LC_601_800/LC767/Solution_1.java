@@ -1,53 +1,60 @@
 package LeetCode.LC_601_800.LC767;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Solution: using PriorityQueue (Heap).
- * Logic is alternate placing the most common letters.
+ * Solution: PriorityQueue.
  */
 public class Solution_1 {
-    public String reorganizeString(String S) {
-        if(S.length() <= 1) return S;
-        int[] count = new int[26]; // count each character's frequency.
-        for(char ch : S.toCharArray()) {
-            count[ch - 'a']++;
-            if(count[ch - 'a'] > (S.length()+1)/2) return ""; // can not reorganize the String.
-        }
-        PriorityQueue<CharCount> pq = new PriorityQueue(new Comparator<CharCount>(){
-            @Override
-            public int compare(CharCount a, CharCount b) {
-                if(a.count == b.count) return a.ch - b.ch;
-                return b.count - a.count;
-            }
-        });
-        for(int i=0; i<26; i++) {
-            char ch = (char)('a' + i);
-            int c = count[i];
-            if(c != 0) pq.offer(new CharCount(ch, c)); // build and push the CharCount to the PriorityQueue.
+    public String reorganizeString(String s) {
+        if (s.length() <= 1) return s;
+
+        // step 1: count each character frequency.
+        int[] counter = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            int count = ++counter[s.charAt(i) - 'a'];
+            if (count > (s.length() + 1) / 2) return ""; // can not reorganize the String.
         }
 
-        // process PriorityQueue to build the final results.
-        StringBuilder sb = new StringBuilder();
-        while(pq.size() >= 2) {
-            CharCount charCount1 = pq.poll();
-            CharCount charCount2 = pq.poll();
-            sb.append(charCount1.ch);
-            sb.append(charCount2.ch);
-            if(--charCount1.count > 0) pq.offer(charCount1);
-            if(--charCount2.count > 0) pq.offer(charCount2);
+        // step 2: build the priority queue based on the Pair.
+        PriorityQueue<Pair> pq = new PriorityQueue<>((p1, p2) -> p2.getCount() - p1.getCount());
+        for (int i = 0; i < 26; i++) {
+            if (counter[i] > 0) pq.offer(new Pair((char)('a' + i), counter[i]));
         }
-        if(!pq.isEmpty()) sb.append(pq.poll().ch);
+
+        // step 3: insert the most frequent char into the result every other slot.
+        StringBuilder sb = new StringBuilder();
+        while (pq.size() >= 2) {
+            Pair p1 = pq.poll();
+            Pair p2 = pq.poll();
+            sb.append(p1.getChar()).append(p2.getChar());
+            if (p1.getCount() - 1 > 0) pq.offer(new Pair(p1.getChar(), p1.getCount() - 1));
+            if (p2.getCount() - 1 > 0) pq.offer(new Pair(p2.getChar(), p2.getCount() - 1));
+        }
+
+        // step 4: insert the last Pair char (if exist) into the result.
+        while (!pq.isEmpty()) sb.append(pq.poll().getChar());
         return sb.toString();
     }
 
-    class CharCount {
-        char ch; // character of the S.
-        int count; // frequency of the character.
-        public CharCount(char ch, int count) {
+    class Pair {
+        private char ch;
+        private int count;
+        public Pair(char ch, int count) {
             this.ch = ch;
             this.count = count;
+        }
+
+        public char getChar() {
+            return ch;
+        }
+
+        public int getCount() {
+            return count;
+        }
+
+        public String toString() {
+            return ch + "->" + count;
         }
     }
 }
