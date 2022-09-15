@@ -1,29 +1,26 @@
-package LeetCode.Tree;
+package LeetCode.LC_401_600.LC450;
 
 import Shared.TreeNode;
 
-public class LeetCode450 {
-    /**
-     * There are 4 cases that the node contains the key may reside in the tree:
-     * 1. node is a leaf.
-     * 2. node is not leaf and only has left child.
-     * 3. node is not leaf and only has right child.
-     * 4. node is not leaf and has both left and right child.
-     */
+/**
+ * Solution 2: in-place deletion.
+ */
+public class Solution_2 {
     public TreeNode deleteNode(TreeNode root, int key) {
         if(root == null) return null;
-        if(key > root.val) {
+
+        if (key > root.val) {
             root.right = deleteNode(root.right, key);
         } else if (key < root.val) {
             root.left = deleteNode(root.left, key);
         } else {
-            if(root.left == null && root.right == null) {
+            if (root.left == null && root.right == null) {
                 // node is a leaf
                 root = null;
-            } else if(root.right == null) {
+            } else if (root.right == null) {
                 // node only has left child
                 return root.left;
-            } else if(root.left == null) {
+            } else if (root.left == null) {
                 // node only has right child
                 return root.right;
             } else {
