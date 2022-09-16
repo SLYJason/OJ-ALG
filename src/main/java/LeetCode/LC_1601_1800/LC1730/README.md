@@ -1,4 +1,11 @@
-# 542: 01 Matrix
+# 1730: Shortest Path to Get Food
+
+### Solution: BFS
+Similar to other shortest path in a grid from A -> B problems, using BFS.
+
+**Time Complexity:** `O(M * N)`.
+
+**Space Complexity:** `O(M * N)`.
 
 ### Related
 200: Number of Islands.

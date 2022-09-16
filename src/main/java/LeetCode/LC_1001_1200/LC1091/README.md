@@ -64,3 +64,5 @@ h = sqrt((current_cell.x – goal.x) ^ 2 + (current_cell.y – goal.y) ^ 2));
 1091: Shortest Path in Binary Matrix.
 
 1254: Number of Closed Islands.
+
+1730: Shortest Path to Get Food.

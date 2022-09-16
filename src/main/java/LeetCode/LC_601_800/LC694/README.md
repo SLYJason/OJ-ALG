@@ -39,3 +39,5 @@ For same two islands, any cell row's difference and column's difference to its o
 
 1254: Number of Closed Islands.
 
+1730: Shortest Path to Get Food.
+
