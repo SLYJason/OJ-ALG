@@ -3,7 +3,7 @@ package LeetCode.LC_801_1000.LC973;
 import java.util.Arrays;
 
 /**
- * Solution 1: brute force, intuitive thoughts.
+ * Solution 1: brute force.
  */
 public class Solution_1 {
     public int[][] kClosest(int[][] points, int K) {
