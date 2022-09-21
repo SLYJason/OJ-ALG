@@ -9,4 +9,14 @@ Use a separate kay-value pair map `<email, name>` to store the email name mappin
 
 **Space Complexity:** `O(N * K)`.
 
+### Solution 2: Union Find
+Step 1: build a union find that if index `account[i]` and `account[j]` can be merged, union find should `parents[i] = j` or `parents[j] = i` equivalent. Using a `emailIndex` map to track each email is belong to which account index.
+If `account[i]` and `account[j]` shared one of the email address,then `union(i, j)`.
 
+Step 2: based on the union find, merge each account email address.
+
+Step 3: get each sorted merged email and return the result.
+
+**Time Complexity:** `O(N * K * log(N * K) + N * K)`
+
+**Space Complexity:** `O(N * K)`.
