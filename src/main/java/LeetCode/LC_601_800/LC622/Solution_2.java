@@ -12,7 +12,7 @@ public class Solution_2 {
         ListNode head, tail;
 
         public MyCircularQueue(int k) {
-            this.capacity = k;
+            capacity = k;
         }
 
         public boolean enQueue(int value) {
@@ -21,12 +21,12 @@ public class Solution_2 {
             }
             ListNode node = new ListNode(value);
             if (isEmpty()) {
-                this.head = this.tail = node;
+                head = tail = node;
             } else {
-                this.tail.next = node;
-                this.tail = node;
+                tail.next = node;
+                tail = node;
             }
-            this.size++;
+            size++;
             return true;
         }
 
@@ -34,25 +34,25 @@ public class Solution_2 {
             if (isEmpty()) {
                 return false;
             }
-            this.head = this.head.next;
-            this.size--;
+            head = head.next;
+            size--;
             return true;
         }
 
         public int Front() {
-            return isEmpty() ? -1 : this.head.val;
+            return isEmpty() ? -1 : head.val;
         }
 
         public int Rear() {
-            return isEmpty() ? -1 : this.tail.val;
+            return isEmpty() ? -1 : tail.val;
         }
 
         public boolean isEmpty() {
-            return this.size == 0;
+            return size == 0;
         }
 
         public boolean isFull() {
-            return this.size == this.capacity;
+            return size == capacity;
         }
     }
 }
