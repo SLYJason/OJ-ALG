@@ -8,19 +8,19 @@ import java.util.HashMap;
 /**
  * Solution: monotonic stack.
  */
-public class Solution {
+public class Solution_2 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        Deque<Integer> stack = new ArrayDeque();
-        Map<Integer, Integer> map = new HashMap();
-        for(int i=0; i<nums2.length; i++) {
-            while(!stack.isEmpty() && nums2[stack.peek()] < nums2[i]) {
-                map.put(nums2[stack.poll()], nums2[i]);
+        Deque<Integer> stack = new ArrayDeque<>();
+        Map<Integer, Integer> map = new HashMap<>(); // key: nums2[i], value: next greater element than nums2[i].
+        for (int n : nums2) {
+            while (!stack.isEmpty() && n > stack.peek()) {
+                map.put(stack.pop(), n);
             }
-            stack.push(i);
+            stack.push(n);
         }
-        // build the result.
+
         int[] res = new int[nums1.length];
-        for(int i=0; i<nums1.length; i++) {
+        for (int i = 0; i < res.length; i++) {
             res[i] = map.getOrDefault(nums1[i], -1);
         }
         return res;
