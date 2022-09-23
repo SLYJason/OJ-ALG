@@ -14,12 +14,13 @@ import Shared.TreeNode;
  */
 public class Solution_2 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        Map<TreeNode, TreeNode> parent = new HashMap<>(); // key: root node, child: left or right child node.
+        Map<TreeNode, TreeNode> parent = new HashMap<>(); // key: left or right child node, value: root node.
         parent.put(root, null);
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
+
         // step 1: build parent, find p and q.
-        while(!parent.containsKey(p) || !parent.containsKey(q)) {
+        while (!parent.containsKey(p) || !parent.containsKey(q)) {
             TreeNode node = stack.pop();
             if (node.left != null) {
                 parent.put(node.left, node);
@@ -30,6 +31,7 @@ public class Solution_2 {
                 stack.push(node.right);
             }
         }
+
         // step 2: find all ancestors of node p, the LCA must exist in one of these ancestors.
         Set<TreeNode> ancestors = new HashSet<>();
         while (p != null) {
