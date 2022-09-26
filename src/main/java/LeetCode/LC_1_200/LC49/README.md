@@ -7,7 +7,7 @@
 
 **Space Complexity:** `O(N)`.
 
-### Solution 2:
+### Solution 2: Encoding
 Using `#` as part of the smart key. `N` is the length of input, `K` is the maximum length of a string.
 
 **Time Complexity:** `O(NK)`.

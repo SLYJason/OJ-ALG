@@ -11,16 +11,16 @@ import java.util.Arrays;
  */
 public class Solution_1 {
     public List<List<String>> groupAnagrams(String[] strs) {
-        if(strs == null || strs.length == 0) return new ArrayList();
-        List<List<String>> res = new ArrayList();
+        if (strs == null || strs.length == 0) return new ArrayList<>();
+        List<List<String>> res = new ArrayList<>();
         Map<String, List<String>> map = new HashMap<>();
-        for(String s : strs) {
+        for (String s : strs) {
             char[] S = s.toCharArray();
             Arrays.sort(S);
             String key = new String(S);
-            if(!map.containsKey(key)) map.put(key, new ArrayList());
+            if (!map.containsKey(key)) map.put(key, new ArrayList<>());
             map.get(key).add(s);
         }
-        return new ArrayList(map.values());
+        return new ArrayList<>(map.values());
     }
 }
