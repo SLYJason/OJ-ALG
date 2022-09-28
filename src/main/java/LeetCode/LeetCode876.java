@@ -1,5 +1,7 @@
 package LeetCode;
 
+import Shared.ListNode;
+
 public class LeetCode876 {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head, fast = head;
