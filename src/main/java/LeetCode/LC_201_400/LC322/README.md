@@ -13,7 +13,7 @@
 ### Follow Up
 Please output the minimum amount coin combinations.
 
-# Related
+### Related
 322: Coin Change.
 
 518: Coin Change II.
