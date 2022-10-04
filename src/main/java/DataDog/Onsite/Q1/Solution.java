@@ -1,15 +1,11 @@
 package DataDog.Onsite.Q1;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.*;
+import java.util.stream.Collectors;
 
-class TagsFilter {
+class TagsFilter1 {
     Map<String, List<Set<String>>> map; // key: tag, value: a list of tags that contains the tag key.
-    TagsFilter(List<List<String>> streams) {
+    TagsFilter1(List<List<String>> streams) {
         map = new HashMap<>();
         for (List<String> stream : streams) {
             for (String tag : stream) {
@@ -37,15 +33,48 @@ class TagsFilter {
                 }
             }
             if (!match) continue;
-            for (String tag : tags) {
-                if (!keywords.contains(tag)) res.add(tag);
-            }
+            List<String> diff = tags.stream().filter(element -> !keywords.contains(element)).collect(Collectors.toList());
+            res.addAll(diff);
         }
         return res;
     }
 }
 
-public class Solution_1 {
+class TagsFilter2 {
+    Map<String, Set<String>> map; // key: tag combinations, value: a list of remaining tags.
+
+    TagsFilter2(List<List<String>> streams) {
+        map = new HashMap<>();
+        for (List<String> stream : streams) {
+            Collections.sort(stream);
+            List<List<String>> permutations = new ArrayList<>();
+            generateCombinations(0, new ArrayList<>(), stream, permutations);
+
+            for (List<String> permutation : permutations) {
+                List<String> diff = stream.stream().filter(element -> !permutation.contains(element)).collect(Collectors.toList());
+                String key = permutation.toString();
+                if (!map.containsKey(key)) map.put(key, new HashSet<>());
+                map.get(key).addAll(diff);
+            }
+        }
+    }
+
+    private void generateCombinations(int index, List<String> list, List<String> streams, List<List<String>> permutations) {
+        for (int i = index; i < streams.size(); i++) {
+            list.add(streams.get(i));
+            permutations.add(new ArrayList<>(list));
+            generateCombinations(i + 1, list, streams, permutations);
+            list.remove(list.size() - 1);
+        }
+    }
+
+    public List<String> filter(List<String> keywords) {
+        Set<String> set = map.getOrDefault(keywords.toString(), new HashSet<>());
+        return new ArrayList<>(set);
+    }
+}
+
+public class Solution {
     public static void main(String[] args) {
         List<List<String>> streams1 = new ArrayList<>();
         List<String> stream1 = new ArrayList<>() {
@@ -84,8 +113,14 @@ public class Solution_1 {
             }
         };
 
-        TagsFilter tagsFilter = new TagsFilter(streams1);
-        System.out.println(tagsFilter.filter(keywords1));
-        System.out.println(tagsFilter.filter(keywords2));
+        System.out.println("TagsFilter1:");
+        TagsFilter1 tagsFilter1 = new TagsFilter1(streams1);
+        System.out.println(tagsFilter1.filter(keywords1));
+        System.out.println(tagsFilter1.filter(keywords2));
+
+        System.out.println("TagsFilter2:");
+        TagsFilter2 tagsFilter2 = new TagsFilter2(streams1);
+        System.out.println(tagsFilter2.filter(keywords1));
+        System.out.println(tagsFilter2.filter(keywords2));
     }
 }
