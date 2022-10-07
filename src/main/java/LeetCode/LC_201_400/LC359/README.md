@@ -9,3 +9,8 @@
 **Time Complexity:** `O(1)`.
 
 **Space Complexity:** `O(N)`.
+
+### Related
+359: Logger Rate Limiter.
+
+362: Design Hit Counter.
