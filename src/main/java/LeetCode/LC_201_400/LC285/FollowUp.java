@@ -8,8 +8,8 @@ import Shared.TreeNode;
 public class FollowUp {
     public TreeNode inorderPredecessor(TreeNode root, TreeNode p) {
         TreeNode predecessor = null;
-        while(root != null) {
-            if(root.val < p.val) {
+        while (root != null) {
+            if (root.val <= p.val) {
                 predecessor = root;
                 root = root.right;
             } else {
