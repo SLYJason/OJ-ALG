@@ -1,7 +1,7 @@
 # 528: Random Pick with Weight
 
 ### Solution 1: Linear Search
-The idea is we calculate the total `weights` from input `w`. Then generate a random number from `weights`. Finally, scan the `w` to get a cumulated `sum`. If `sum > random number` then we find the index.
+The idea is we calculate the prefix sum `prefixSum` and total `weights` from input `w`. Then generate a random number from `weights`. Finally, scan the `prefixSum` as long as the generated random number is in the range of `prefixSum`, the index is found.
  
 **Time Complexity:** construction takes `O(N)`, `pickIndex` takes `O(N)`.
 
