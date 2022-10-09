@@ -14,6 +14,13 @@ Using max heap increased the time complexity, just for reference here.
 
 **Space Complexity:** `O(N)`.
 
+### Follow Up
+If the word has same frequency, also return all of them. Example:
+```markdown
+Input: words = ["i","love","coding","i","love","coding"], k = 2.
+Output: ["coding","i","love"].
+```
+
 ### Related:
 215: Kth Largest Element in an Array.
 

@@ -12,17 +12,17 @@ import java.util.HashMap;
 public class Solution_2 {
     public List<String> topKFrequent(String[] words, int k) {
         List<String> res = new ArrayList<>();
-        Map<String, Integer> wordCount = new HashMap();
-        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> wordCount.get(a).equals(wordCount.get(b)) ? a.compareTo(b) : wordCount.get(b) - wordCount.get(a)); // Important: need to use .equals() to compare Integer objects.
+        Map<String, Integer> map = new HashMap<>();
+        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> map.get(a).equals(map.get(b)) ? a.compareTo(b) : map.get(b) - map.get(a)); // Important: need to use .equals() to compare Integer objects.
         for (String word:words) {
-            wordCount.put(word, wordCount.getOrDefault(word, 0)+1);
+            map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        for(Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             pq.offer(entry.getKey());
         }
-        while(!pq.isEmpty()) {
+        while (!pq.isEmpty()) {
             res.add(pq.poll());
-            if(res.size() == k) break;
+            if (res.size() == k) break;
         }
         return res;
     }
