@@ -10,13 +10,14 @@ import java.util.HashSet;
 public class Solution_2 {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if(!wordList.contains(endWord)) return 0;
+
         Set<String> dict = new HashSet<>(wordList);
         int steps = 0;
         Set<String> queue1 = new HashSet<>();
         Set<String> queue2 = new HashSet<>();
         queue1.add(beginWord);
         queue2.add(endWord);
-        while(!queue1.isEmpty() && !queue2.isEmpty()) {
+        while (!queue1.isEmpty() && !queue2.isEmpty()) {
             steps++;
             // optimization: always start from queue with smaller size.
             if (queue1.size() > queue2.size()) {
@@ -26,16 +27,16 @@ public class Solution_2 {
             }
             Set<String> next_queue = new HashSet<>();
 
-            for(String begin : queue1) {
+            for (String begin : queue1) {
                 char[] arr = begin.toCharArray();
                 // change jth position from 'a' -> 'z' in begin.
-                for(int j=0; j<begin.length(); j++) {
+                for (int j = 0; j < begin.length(); j++) {
                     char ori = arr[j];
-                    for(int k='a'; k<='z'; k++) {
+                    for (int k = 'a'; k <= 'z'; k++) {
                         arr[j] = (char)k;
                         String next = new String(arr);
-                        if(queue2.contains(next)) return steps + 1;
-                        if(dict.contains(next)) {
+                        if (queue2.contains(next)) return steps + 1;
+                        if (dict.contains(next)) {
                             dict.remove(next);
                             next_queue.add(next);
                         }

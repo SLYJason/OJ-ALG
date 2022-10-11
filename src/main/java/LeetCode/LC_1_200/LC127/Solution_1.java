@@ -11,24 +11,25 @@ import java.util.Queue;
  */
 public class Solution_1 {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if(!wordList.contains(endWord)) return 0;
+        if (!wordList.contains(endWord)) return 0;
+
         Set<String> dict = new HashSet<>(wordList); // Important: convert to set can get rid of TLE.
         int steps = 0;
         Queue<String> queue = new LinkedList<>();
         queue.offer(beginWord);
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             steps++;
             int size = queue.size();
-            while(size-- > 0) {
+            while (size-- > 0) {
                 String cur = queue.poll();
                 char[] arr = cur.toCharArray();
-                for(int i=0; i<arr.length; i++) {
+                for (int i = 0; i < arr.length; i++) {
                     char ori = arr[i];
-                    for(int k='a'; k<='z'; k++) {
+                    for (int k = 'a'; k <= 'z'; k++) {
                         arr[i] = (char)k;
                         String next = new String(arr);
-                        if(endWord.equals(next)) return steps + 1;
-                        if(dict.contains(next)) {
+                        if (endWord.equals(next)) return steps + 1;
+                        if (dict.contains(next)) {
                             dict.remove(next);
                             queue.offer(next);
                         }

@@ -1,4 +1,7 @@
 # 126: Word Ladder II
+The idea is:
+1. Use BFS to construct the graph.
+2. Use DFS to extract the shorted path.
 
 Example 1:
 ![chart](LC126_1.png)
