@@ -2,17 +2,28 @@ package LeetCode.LC_401_600.LC572;
 
 import Shared.TreeNode;
 
+/**
+ * Solution 2: string matching.
+ */
 public class Solution_2 {
     public boolean isSubtree(TreeNode s, TreeNode t) {
-        if(s == null) return false;
-        if(isIdentical(s, t)) return true;
-        return isSubtree(s.left, t) || isSubtree(s.right, t);
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+        serialize(s, sb1);
+        serialize(t, sb2);
+        return sb1.toString().contains(sb2.toString());
     }
 
-
-    private boolean isIdentical(TreeNode s, TreeNode t) {
-        if(s == null && t == null) return true;
-        if(s == null || t == null) return false;
-        return s.val == t.val && isIdentical(s.left, t.left) && isIdentical(s.right, t.right);
+    private void serialize(TreeNode node, StringBuilder sb) {
+        if (node == null) {
+            sb.append("null,");
+            return;
+        }
+        // reason to use # here: if s=[12], t=[2],
+        // not using # serialization: 12,null,null, and 2,null,null,
+        // using # serialization: #12,null,null, and #2,null,null,
+        sb.append("#" + node.val + ",");
+        serialize(node.left, sb);
+        serialize(node.right, sb);
     }
 }
