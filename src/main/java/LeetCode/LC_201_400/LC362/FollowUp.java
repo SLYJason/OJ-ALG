@@ -1,13 +1,13 @@
 package LeetCode.LC_201_400.LC362;
 
-import java.util.Queue;
+import java.util.Deque;
 import java.util.LinkedList;
 /**
  * Follow Up: queue
  */
 public class FollowUp {
     class HitCounter {
-        Queue<Hit> queue;
+        Deque<Hit> queue;
         int count;
 
         public HitCounter() {
@@ -21,7 +21,7 @@ public class FollowUp {
                 count = 1;
                 return;
             }
-            Hit hit = queue.peek();
+            Hit hit = queue.getLast();
             if (hit.timestamp == timestamp) {
                 hit.hits++;
             } else {

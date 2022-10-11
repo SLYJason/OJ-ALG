@@ -1,6 +1,6 @@
 package Atlassian.API_Limiter;
 
-import java.util.Queue;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.HashMap;
@@ -45,7 +45,7 @@ public class API_Limiter {
 
 class HitCounter {
     int window;
-    Queue<Hit> queue;
+    Deque<Hit> queue;
     int count;
 
     public HitCounter(int window) {
@@ -60,7 +60,7 @@ class HitCounter {
             count = 1;
             return;
         }
-        Hit hit = queue.peek();
+        Hit hit = queue.getLast();
         if (hit.timestamp == timestamp) {
             hit.hits++;
         } else {
