@@ -1,5 +1,10 @@
 # 314: Binary Tree Vertical Order Traversal
 
+### Solution: BFS
+**Time Complexity:** `O(N)`.
+
+**Space Complexity:** `O(N)`.
+
 ### Related
 102: Binary Tree Level Order Traversal.
 

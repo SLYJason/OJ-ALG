@@ -12,10 +12,10 @@ import java.util.Collections;
  */
 public class Solution_2 {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
-        if(root == null) return new ArrayList();
+        if(root == null) return new ArrayList<>();
 
-        List<List<Integer>> res = new ArrayList();
-        List<NodePosition> nodeList = new ArrayList();
+        List<List<Integer>> res = new ArrayList<>();
+        List<NodePosition> nodeList = new ArrayList<>();
         // Step 1: DFS traverse the tree, push nodes to nodeList.
         dfs(root, 0, 0, nodeList);
 
@@ -33,13 +33,13 @@ public class Solution_2 {
 
         // Step 3: build the result.
         int currColumn = nodeList.get(0).column;
-        res.add(new ArrayList());
-        for(NodePosition nodePosition : nodeList) {
-            if(currColumn != nodePosition.column) {
+        res.add(new ArrayList<>());
+        for (NodePosition nodePosition : nodeList) {
+            if (currColumn != nodePosition.column) {
                 currColumn = nodePosition.column;
                 res.add(new ArrayList<>());
             }
-            res.get(res.size()-1).add(nodePosition.val);
+            res.get(res.size() - 1).add(nodePosition.val);
         }
         return res;
     }
@@ -47,8 +47,8 @@ public class Solution_2 {
     private void dfs(TreeNode root, int r, int c, List<NodePosition> nodeList) {
         if(root == null) return;
         nodeList.add(new NodePosition(r, c, root.val));
-        dfs(root.left, r+1, c-1, nodeList);
-        dfs(root.right, r+1, c+1, nodeList);
+        dfs(root.left, r + 1, c - 1, nodeList);
+        dfs(root.right, r + 1, c + 1, nodeList);
     }
 
     class NodePosition {
