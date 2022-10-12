@@ -15,7 +15,7 @@ public class Solution_2 {
         while (j < s.length()) {
             if (!window.contains(S[j])) {
                 window.add(S[j++]);
-                max_length = Math.max(max_length, j - i);
+                max_length = Math.max(max_length, window.size());
             } else {
                 window.remove(S[i++]);
             }

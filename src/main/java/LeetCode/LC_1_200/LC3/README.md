@@ -25,6 +25,9 @@ Map: `K` -> `character`, `V` -> `index of character`.
 
 **Space Complexity:** `O(N)`.
 
+### Follow Up
+Return a list of the longest substring without repeating characters.
+
 ### Related
 3: Longest Substring Without Repeating Characters.
 
