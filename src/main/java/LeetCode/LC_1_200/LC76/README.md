@@ -1,7 +1,7 @@
 # 76: Minimum Window Substring
 
 ### Solution: Sliding Window
-The idea is maintain a window, expand the right pointer `j` as much as possible to include all `t` characters. Here we use `distance` to denote how many characters of `t` we have included. If `distance == t.length()`, we are sure the window included all `t` characters, so we need to contract the window, i.e. move left pointer `i`. Whenever the `distance != t.length()`, we then need to expand the window again. Repeat the process once we find the minimum window substring.
+Maintaining a window, expand the right pointer `j` as much as possible to include all `t` characters. Here we use `distance` to denote how many characters of `t` we have included. If `distance == t.length()`, we are sure the window included all `t` characters, so we need to contract the window, i.e. move left pointer `i`. Whenever the `distance != t.length()`, we then need to expand the window again. Repeat the process once we find the minimum window substring.
 
 `distance` here looks like: [Hamming Distance](https://en.wikipedia.org/wiki/Hamming_distance).
 
