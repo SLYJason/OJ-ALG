@@ -57,5 +57,9 @@ public class FollowUp {
         int[] coins5 = {1, 2, 3, 4};
         int amount5 = 22;
         System.out.println(coinCombinations(coins5, amount5));
+
+        int[] coins6 = {1, 3, 5, 6};
+        int amount6 = 14;
+        System.out.println(coinCombinations(coins6, amount6));
     }
 }
