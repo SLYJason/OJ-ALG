@@ -1,5 +1,9 @@
 # 10: Regular Expression Matching
 
+### Diff with LC44
+LC10: `*` matches zero or more of the preceding element.
+LC44: `*` matches any sequence of characters (including the empty sequence).
+
 ### Solution: DP
 `dp[i][j]`: `s` substring with length `i` matches `p` substring with length `j` or not.
 
