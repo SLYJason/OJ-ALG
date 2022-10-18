@@ -10,7 +10,7 @@ public class Solution {
         dp[0][0] = true;
         // step 1: initialization.
         for (int i = 1; i <= n2; i++) {
-            if (p.charAt(i - 1) == '*') { // e.g.: "" matches "*"
+            if (p.charAt(i - 1) == '*') { // e.g.: "abc" matches "*"
                 dp[0][i] = true;
             } else {
                 break;
