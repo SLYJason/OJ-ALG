@@ -4,7 +4,7 @@
 LC10: `*` matches zero or more of the preceding element.
 LC44: `*` matches any sequence of characters (including the empty sequence).
 
-### Solution: DP
+### Solution 1: DP
 Similar to LC10, `dp[i][j]`: `s` substring with length `i` matches `p` substring with length `j` or not.
 
 Assuming for a given `s` substring with length `i` and `p` substring with length `j`, their corresponding characters at `i - 1` and `j - 1` are:
@@ -25,6 +25,11 @@ Worth to note for the base case:
 **Time Complexity:** `O(M * N)`, `M` is the length of `s`, `N` is the length of `p`. Because we are calculating every `dp[i][j]`.
 
 **Space Complexity:** `O(M * N)`, we use a `dp` table.
+
+### Solution 2: Two Pointers
+**Time Complexity:** `O(max(M, N))`.
+
+**Space Complexity:** `O(1)`.
 
 ### Related
 10: Regular Expression Matching.

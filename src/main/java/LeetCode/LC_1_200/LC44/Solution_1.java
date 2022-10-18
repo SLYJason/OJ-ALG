@@ -3,7 +3,7 @@ package LeetCode.LC_1_200.LC44;
 /**
  * Solution: DP.
  */
-public class Solution {
+public class Solution_1 {
     public boolean isMatch(String s, String p) {
         int n1 = s.length(), n2 = p.length();
         boolean[][] dp = new boolean[n1 + 1][n2 + 1];
