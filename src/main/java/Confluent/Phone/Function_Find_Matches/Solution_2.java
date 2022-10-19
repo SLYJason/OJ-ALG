@@ -1,11 +1,13 @@
 package Confluent.Phone.Function_Find_Matches;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Solution_1 {
+public class Solution_2 {
     public static void main(String[] args) {
         // Example A:
-        FunctionLibrary_A f1 = new FunctionLibrary_A();
+        FunctionLibrary_B f1 = new FunctionLibrary_B();
         Set<Function> set1 = new HashSet<>();
         System.out.println("Example A: ");
         Function funcA = new Function("FuncA", new ArrayList<>(){{
@@ -40,7 +42,7 @@ public class Solution_1 {
         System.out.println(f1.findMatches(new ArrayList<>(){{ add("String"); add("Integer"); add("Integer"); }}));
 
         // Example B:
-        FunctionLibrary_A f2 = new FunctionLibrary_A();
+        FunctionLibrary_B f2 = new FunctionLibrary_B();
         Set<Function> set2 = new HashSet<>();
         System.out.println("\nExample B: ");
         Function funcAA = new Function("funA", new ArrayList<>(){{

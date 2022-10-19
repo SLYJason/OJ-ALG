@@ -9,10 +9,10 @@ import java.util.ArrayList;
 /**
  * Solution 1: brute force.
  */
-public class FunctionLibrary {
+public class FunctionLibrary_A {
     public final Map<String, Function> map;
 
-    public FunctionLibrary() {
+    public FunctionLibrary_A() {
         this.map = new HashMap<>();
     }
 
