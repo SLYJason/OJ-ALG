@@ -1,6 +1,5 @@
 package LeetCode.LC_201_400.LC277;
 
-import javafx.util.Pair;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -34,5 +33,14 @@ public class FollowUp {
     // The knows API is defined in the parent class Relation.
     boolean knows(int a, int b) {
         return true;
+    }
+}
+
+class Pair<K, V> {
+    K key;
+    V value;
+    Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
     }
 }
