@@ -1,12 +1,12 @@
 package LeetCode.LC_1_200.LC151;
 
 /**
- * Solution: two-pointers.
+ * Solution 2: two-pointers.
  */
-public class Solution {
+public class Solution_2 {
     public String reverseWords(String s) {
         StringBuilder sb = new StringBuilder();
-        for(int i = s.length()-1; i > -1; i--) {
+        for(int i = s.length() - 1; i > -1; i--) {
             if (s.charAt(i) == ' ') continue;
             int j = i;
             while (i > -1 && s.charAt(i) != ' ') i--;
